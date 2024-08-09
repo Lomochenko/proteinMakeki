@@ -1,0 +1,13 @@
+.section-b{
+    .title-desc{
+        p{
+            @include text-p();
+        }
+    }
+    .section-body{
+        // @media screen and(min-width:$breakpoint-lg){
+        //     padding-top: 9rem;
+        //     padding-bottom: 9rem;
+        // }
+    }
+}

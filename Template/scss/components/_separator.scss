@@ -1,0 +1,16 @@
+.inline-separator{
+    display: inline-flex;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    content: "";
+    vertical-align: middle;
+    &:before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: auto;
+        border-bottom: 2px solid currentColor;
+    }
+}

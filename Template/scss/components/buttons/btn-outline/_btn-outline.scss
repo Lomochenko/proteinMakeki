@@ -1,0 +1,101 @@
+.btn-outline {
+    $borderWidth: 2px;
+    // border: $borderWidth solid currentColor;
+    border: none;
+    border-radius: 0px;
+    background: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.3s;
+    overflow: hidden;
+    min-height: 48px;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0.75em 1.875em;
+    box-shadow: inset 0 0 0px 2px rgba(white, 0.2);
+    .text{
+        z-index: 1;
+    }
+    .icon{
+        line-height: 0;
+        height: 0.5rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        > * {
+            font-size: 1.2em;
+        }
+    }
+    .icon ~ .text{
+        margin-left: 1em;
+    }
+    .text ~ .icon{
+        margin-left: 1em;
+    }
+    &.border-thick{
+        border-width: 3px;
+        &:before,
+        &:after{
+            border-width: 3px;
+        }
+    }
+    &.btn-lg{
+        font-size: 1.5rem;
+        padding: 1em 1.875em;
+        line-height: 1;
+    }
+    &::before{
+        position: absolute;
+        content: "";
+        top: -$borderWidth;
+        bottom: -$borderWidth;
+        left: -$borderWidth;
+        right: 100%;
+        // width: 0%;
+        background: currentColor;
+        transition: 0.2s;
+        opacity: 0.2;
+        border-radius: inherit;
+        transition-timing-function: cubic-bezier(0.25, 0.75, 0.2, 1);
+    }
+    &:active {
+        opacity: 0.75;
+    }
+
+    &:hover {
+        opacity: 0.75;
+        &::before{
+            right: -$borderWidth;
+        }
+    }
+
+}
+
+// mixin
+@mixin btn-outline($color) {
+    color: $color;
+    box-shadow: inset 0 0 0px 2px rgba($color, 0.2);
+    &:hover{
+        box-shadow: inset 0 0 0px 2px $color;
+    }
+}
+
+
+// color variation
+@each $color,
+$value in $theme-colors {
+    @if $value==$white {
+        .btn-outline.btn-white {
+            // @include btn-outline($value, $primary);
+            @include btn-outline($value);
+        }
+    }
+
+    @else {
+        .btn-outline.btn-#{""+$color} {
+            @include btn-outline($value);
+        }
+    }
+}

@@ -1,0 +1,71 @@
+
+.item-pricing-a{
+    background: transparent;
+    background: rgba(white,0.1);
+    border: none;
+    border: 2px solid $white;
+    padding: 0;
+    // border-radius: 16px;
+    .item-header{
+        background: none;
+        border: none;
+        padding: 1.25rem;
+        .title{
+            margin: 0;
+            font-size: 2rem;
+            line-height: 1.2;
+            font-weight: bold;
+        }
+    }
+    .item-footer{
+        background: none;
+        border: none;
+        padding: 1.25rem;
+    }
+    .item-body{
+        padding: 1.25rem;
+    }
+    .item-header ~ .item-body{
+        padding-top: 0;
+    }
+    .item-body ~ .item-footer{
+        padding-top: 0;
+    }
+    .price{
+        line-height: 1.2;
+        .amount{
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .unit{
+            @include text-p(currentColor);
+            // line-height: 1;
+        }
+        p{
+            margin-bottom: 0;
+            display: inline-block;
+            font-size: 1.25rem;
+            // @include text-p(white);
+        }
+    }
+    .list-feature{
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        margin-top: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.75;
+        @include text-p(currentColor);
+    }
+
+    &.featured{
+        background: $white;
+        color: $primary;
+        .list-feature{
+            color: $black;
+            .icon{
+                color: $primary;
+            }
+        }
+    }
+}

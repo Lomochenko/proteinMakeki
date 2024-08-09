@@ -1,0 +1,33 @@
+@import 'control';
+@import 'label';
+
+.form-a{
+    .info{
+        .success{
+            display: none;
+        }
+        .error{
+            display: none;
+        }
+    }
+    .success-show{
+        display: none;
+    }
+    .error-show{
+        display: none;
+    }
+    
+    &.form-success{
+        .success-gone{
+            display: none;
+        }
+        .success-show{
+            display: block;
+        }
+    }
+    &.form-error{
+        .error-show{
+            display: block;
+        }
+    }
+}

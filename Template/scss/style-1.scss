@@ -1,0 +1,14 @@
+// Variables
+$black: #1d1d1d;
+$white: #ffffff;
+$text-black: #2d2d2d;
+$text-white: #ffffff;
+
+:root {
+    --margin-x: 88px;
+    --margin-y: 64px;
+    --white: #{$white};
+    --black: #{$black};
+    --text-white: #{$text-white};
+    --text-black: #{$text-black};
+}

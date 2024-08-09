@@ -1,0 +1,24 @@
+
+
+.slider-simple-b{
+    position: relative;
+    .swiper-slide{
+        opacity: 0;
+    }
+    .swiper-pagination{
+        text-align: right;
+        .swiper-pagination-bullet{
+            width: 8px;
+            height: 8px;
+            background: white;
+            opacity: 0.25;
+            margin: 0 8px;
+            transition: 0.2s;
+            transition-timing-function: cubic-bezier(0.25, 0.75, 0.2, 1);
+        }
+        .swiper-pagination-bullet-active{
+            opacity: 1;
+            transform: scale(2);
+        }
+    }
+}

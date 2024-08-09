@@ -1,0 +1,83 @@
+.btn-scrolldown-a {
+    color: currentColor;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .icon {
+        margin-bottom: 8px;
+    }
+
+    .text {
+        font-size: $text-sm;
+        transition: 0.3s;
+        transition-timing-function: cubic-bezier(0.25, 0.75, 0.2, 1);
+    }
+    .text-before-vertical{
+        display: block;
+        font-size: 0.875rem;
+        text-align: center;
+        margin: 1rem 0;
+        perspective: 40px;
+        opacity: 0.3;
+        position: relative;
+        .char{
+            display: block;
+            height: 1em;
+            width: 1em;
+            transition: .0s;
+            transition-timing-function: cubic-bezier(0.25, 0.75, 0.2, 1);
+        }
+    }
+    // scroll down
+    .icon-scrolldown {
+        width: 22px;
+        height: 38px;
+        border: 1px solid rgba(white, 0.3);
+        display: block;
+        border-radius: 40px;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: "";
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 16px;
+            background: $white;
+            transition: 0.3s;
+            transition-timing-function: cubic-bezier(0.25, 0.75, 0.2, 1);
+        }
+    }
+
+    &:hover {
+        color: currentColor;
+        .text-before-vertical{
+            .char{
+                transition: 2s;
+                transform: rotateY(360deg);
+            }
+            // opacity
+            @for $i from 0 through 20 {
+                .char:nth-child(#{$i}) {
+                    transition-delay: ($i - 1) * 0.075s;
+                }
+            }
+
+        }
+        .icon-scrolldown{
+            &:after{
+                top: 22px;
+            }
+        }
+        .text{
+            opacity: 0.5;
+        }
+    }
+
+}

@@ -1,0 +1,33 @@
+.item-quote-a{
+    .quote{
+        position: relative;
+        color: $white;
+        font-size: 1.25rem;
+        line-height: 1.7;
+        @media screen and (min-width:$breakpoint-lg){
+            font-size: 1.5rem;
+            line-height: 1.8;
+        }
+        .quote-icon{
+            font-size: 1.75em;
+            line-height: 0;
+            // line-height: 1.2;
+            height: 1em;
+            // width: 1em;
+            vertical-align: super;
+            transform: translateY(0.05em);
+            // padding-top: 0.2em;
+            display: inline-block;
+            margin-right: 0.25em;
+            svg{
+                height: 1em;
+                width: 1em;
+            }
+            // vertical-align: text-bottom;
+            @media screen and (min-width:$breakpoint-lg){
+                font-size: 2.5em;
+                transform: none;
+            }
+        }
+    }
+}

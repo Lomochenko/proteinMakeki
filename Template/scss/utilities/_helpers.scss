@@ -1,0 +1,38 @@
+
+// opacity
+@for $i from 0 through 10 {
+    .opacity-#{$i} {
+        opacity: ($i*0.1) !important;
+    }
+}
+
+// border-radius
+.rounded-xs{
+    border-radius: 4px !important;
+}
+.rounded-sm{
+    border-radius: 8px !important;
+}
+.rounded-md{
+    border-radius: 16px !important;
+}
+.rounded-lg{
+    border-radius: 32px !important;
+}
+
+.shadow-sm{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+.shadow-md{
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+}
+.shadow-lg{
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.overflow-x-hidden{
+    overflow-x: hidden;
+}
+.overflow-hidden{
+    overflow: hidden;
+}

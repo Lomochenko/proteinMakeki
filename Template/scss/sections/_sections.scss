@@ -1,0 +1,30 @@
+
+/* 2.1 Section init */
+@import 'section-init';
+
+/* 2.2 Section cover */
+
+@import 'section-cover';
+/* 2.3 Section title */
+@import 'section-title';
+
+/* 2.4 Section content */
+@import 'section-body';
+@import 'section-content';
+
+/* 2.5 Section contact */
+@import 'section-contact';
+
+/* 2.6 Section footer */
+@import 'section-footer';
+
+
+
+/* 2.7 Section variants */
+
+/* 2.7.a Default format  */
+@import 'section-a';
+@import 'section-b';
+
+/* 2.7.b Hero  */
+@import 'hero/hero';

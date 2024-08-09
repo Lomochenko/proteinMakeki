@@ -1,0 +1,272 @@
+// Variables
+@import 'variables';
+$black: #1d1d1d;
+$white: #ffffff;
+$text-black: #2d2d2d;
+$text-white: #ffffff;
+
+:root {
+    --white: #{$white};
+    --black: #{$black};
+    --text-white: #{$text-white};
+    --text-black: #{$text-black};
+    @media screen and (min-width: $breakpoint-lg){
+        --margin-x: 88px;
+        --margin-y: 64px;
+    }
+}
+
+body {
+    color: $black;
+    color: var(--black);
+    background: $white;
+    background: var(--white);
+}
+
+.text-stroke {
+    -webkit-text-stroke: 1px $text-black;
+    -webkit-text-stroke: 1px var(--text-black, $text-black);
+    color: transparent;
+}
+
+.navbar-a {
+    color: var(--text-white);
+    .navbar-brand {
+        background: transparent;
+        color: var(--text-white);
+
+        .light-logo {
+            display: block;
+        }
+
+        .dark-logo {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+    .navbar-a {
+        color: var(--text-black);
+        .navbar-brand {
+            background: transparent;
+            color: var(--text-black);
+
+            .light-logo {
+                display: none;
+            }
+
+            .dark-logo {
+                display: block;
+            }
+        }
+
+        .navbar-nav .nav-link {
+            color: rgba($black, 0.7);
+            padding-left: 0;
+            padding-right: 0;
+
+            &:hover,
+            &:focus {
+                color: $black;
+            }
+        }
+
+        .navbar-nav .nav-item.active a,
+        .navbar-nav .nav-item.active .nav-item {
+            color: $black;
+        }
+
+        .navbar-toggler {
+            color: $black;
+        }
+        .dropdown-menu{
+            box-shadow: 0px 0px 8px rgba(black, 0.1);
+            background: rgba(white, 0.5);
+        }
+        .dropdown-toggle::before{
+            box-shadow: inset 0 0 0px 1px rgba(black, 0.2);
+        }
+        .dropdown-toggle:after {
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%228.628%22%20height%3D%225.137%22%20viewBox%3D%220%200%208.628%205.137%22%3E%0D%0A%20%20%3Cpath%20id%3D%22chevron-down-sharp%22%20d%3D%22M9.193,12.87l3.491-3.491.823.823L9.193,14.516,4.879,10.2,5.7,9.379Z%22%20transform%3D%22translate(-4.879%20-9.379)%22%20fill%3D%22%23272123%22%20fill-rule%3D%22evenodd%22%2F%3E%0D%0A%3C%2Fsvg%3E%0D%0A') ;
+            background-position: center 55%;
+            background-repeat: no-repeat;
+            background-size: 10px;
+        }
+        .btn-outline,
+        .btn-outline.btn-white{
+            color: $black;
+            box-shadow: inset 0 0 0px 2px rgba(black, 0.2);
+        }
+    }
+    
+
+    .navbar-a.content-white {
+        .navbar-brand {
+            background: transparent;
+            color: var(--text-white);
+
+            .light-logo {
+                display: block;
+            }
+
+            .dark-logo {
+                display: none;
+            }
+        }
+
+        .navbar-nav .nav-link {
+            color: rgba($white, 0.7);
+            padding-left: 0;
+            padding-right: 0;
+
+            &:hover,
+            &:focus {
+                color: $white;
+            }
+        }
+
+        .navbar-nav .nav-item.active a,
+        .navbar-nav .nav-item.active .nav-item {
+            color: $white;
+        }
+
+        .navbar-toggler {
+            color: $white;
+        }
+        
+        .dropdown-menu{
+            box-shadow: 0px 0px 8px rgba(white, 0.1);
+            background: rgba(black, 0.5);
+        }
+        .dropdown-toggle::before{
+            box-shadow: inset 0 0 0px 1px rgba(white, 0.2);
+        }
+        .dropdown-toggle:after {
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%228.628%22%20height%3D%225.137%22%20viewBox%3D%220%200%208.628%205.137%22%3E%0D%0A%20%20%3Cpath%20id%3D%22chevron-down-sharp%22%20d%3D%22M9.193,12.87l3.491-3.491.823.823L9.193,14.516,4.879,10.2,5.7,9.379Z%22%20transform%3D%22translate(-4.879%20-9.379)%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%0D%0A%3C%2Fsvg%3E%0D%0A') ;
+            background-position: center 55%;
+            background-repeat: no-repeat;
+            background-size: 10px;
+        }
+        
+        .btn-outline,
+        .btn-outline.btn-white{
+            color: $white;
+            box-shadow: inset 0 0 0px 2px rgba(white, 0.2);
+        }
+    }
+}
+
+
+.footer-page {
+    color: $black;
+
+    &.content-white {
+        color: $white;
+    }
+}
+
+.nav-dot-menu {
+    .nav-link {
+        background: rgba($black, 0.3);
+
+        &:hover {
+            background: $black;
+
+            &:after {
+                background: rgba($black, 0.2);
+            }
+        }
+
+        &.content-white {
+            background: rgba($white, 0.3);
+
+            &:hover {
+                background: $white;
+
+                &:after {
+                    background: rgba($white, 0.2);
+                }
+            }
+        }
+    }
+
+    .nav-item.active,
+    li.active {
+
+        a,
+        .nav-link {
+            background: $black;
+
+            &:after {
+                background: rgba($black, 0.2);
+            }
+
+            &.content-white {
+                background: $white;
+
+                &:after {
+                    background: rgba($white, 0.2);
+                }
+            }
+        }
+    }
+}
+
+/* section content */
+.section {
+    background: $white;
+
+    .title-desc {
+        p {
+            color: rgba($black, 0.7);
+        }
+    }
+}
+
+.section-contact .contact-main,
+.section-contact .email-main {
+    color: $black;
+}
+
+.section.content-white {
+    color: $white;
+    color: var(--white);
+    background: transparent;
+    // background: $black;
+    // background: var(--black);
+
+    .text-stroke {
+        -webkit-text-stroke: 1px white;
+        -webkit-text-stroke: 1px var(--white, #ffffff);
+        color: transparent;
+    }
+
+    .title-desc {
+        p {
+            color: rgba($white, 0.7);
+        }
+    }
+
+    .contact-main,
+    .email-main {
+        color: $white;
+    }
+}
+
+.slide-item-b .item-content .title {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-b {
+    color: $black;
+}
+
+/* Items */
+.item-image-e .item-body {
+
+    h4,
+    p {
+        color: var(--black)
+    }
+}

@@ -1,0 +1,107 @@
+.scroll-anim{
+    // .anim-ready[data-anim-visible="fade"] {
+    [data-anim-visible="fade"] {
+        opacity: 0;
+        transition: 1.2s;
+    }
+    // .anim-ready.anim-visible[data-anim-visible="fade"]{
+    .anim-visible[data-anim-visible="fade"]{
+        opacity: 1;
+    }
+    // .anim-ready[data-anim-visible="fade-up"] {
+    [data-anim-visible="fade-up"] {
+        opacity: 0;
+        transition: 0.6s;
+        transform: translateY(64px);
+        transition-timing-function: cubic-bezier(0.25, 0.75, 0.2, 1);
+        // transition-delay: 0.3s;
+    }
+    // .anim-ready.anim-visible[data-anim-visible="fade-up"]{
+    .anim-visible[data-anim-visible="fade-up"]{
+        transform: none;
+        opacity: 1;
+    }
+    // .anim-ready[data-anim-visible="zoom-in"] {
+    [data-anim-visible="zoom-in"] {
+        opacity: 0;
+        transform: scale(1.5);
+        transition: 1.2s;
+    }
+    // .anim-ready.anim-visible[data-anim-visible="zoom-in"]{
+    .anim-visible[data-anim-visible="zoom-in"]{
+        transform: none;
+        opacity: 1;
+    }
+    // .anim-ready[data-anim-visible="unmask"] {
+    [data-anim-visible="unmask"] {
+        // transition: 1.2s;
+        // transition-delay: 0.3s;
+        position: relative;
+        z-index: 0;
+        &::before{
+            content: "";
+            background: $gray;
+            position: absolute;
+            top: auto;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            transition: 0.9s;
+            // transition-delay: 1.2s;
+            transition-timing-function: cubic-bezier(0.25, 0.75, 0.2, 1);
+            z-index: 1;
+            // transition-delay: 0.3s;
+        }
+
+    }
+    // .anim-ready.anim-visible[data-anim-visible="unmask"]{
+    .anim-visible[data-anim-visible="unmask"]{
+        opacity: 1;
+        &::before{
+            height: 0%;
+        }
+    }
+
+    // .anim-ready[data-anim-visible="by-letter"] {
+    [data-anim-visible="by-letter"] {
+        opacity: 0;
+        .line{
+            // display: block;
+        }
+        .word{
+            display: inline-block;
+            // white-space: break-spaces;
+            white-space: nowrap;
+        }
+        .letter{
+            display: inline-block;
+            white-space: break-spaces;
+            opacity: 0;
+            transform: translateY(50%);
+            // transform: translateY(50%) scale(1.5);
+            transition: 0.9s;
+            transition-timing-function: cubic-bezier(0.25, 0.75, 0.2, 1);
+        }
+    }
+    // .anim-ready.anim-visible[data-anim-visible="by-letter"]{
+    .anim-visible[data-anim-visible="by-letter"]{
+        opacity: 1;
+        .letter{
+            opacity: 1;
+            transform: none;
+        }
+        // $begin : 0.0s;
+        // $param : 0.02;
+        // @for $line from 1 through 4 {
+        //     $beginLine : ($line - 1)*0.15;
+        //     .line:nth-child(#{$line}){
+        //         @for $i from 1 through 30 {
+        //             .letter:nth-child(#{$i}){
+        //                 transition-delay: ($begin + $beginLine - $param) + $i*$param + 0.2s;
+        //             }
+        //         }
+        //     }
+        // }
+    }
+}

@@ -1,0 +1,22 @@
+.bg-gradient-primary{
+    background: linear-gradient(to left, #D1335B, #00152e);
+    background: linear-gradient(to left, $primary, #00152e);
+    background: linear-gradient(to left, #C0105D, #250234);
+    background: linear-gradient(to left, $primary, #250234);
+}
+
+// solid color
+@each $color,
+$value in $theme-colors {
+    .bg-#{""+$color} {
+        background-color: $value !important;
+    }
+}
+
+.filter-black{
+    filter: grayscale(1);
+}
+
+.bg-black-demo{
+    background: #2D2D2D;
+}

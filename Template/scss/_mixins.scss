@@ -1,0 +1,82 @@
+@mixin text-p ($color : rgba($white,0.75)) {
+    color: $color;
+    // font-size: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    
+    @media screen and (min-width:$breakpoint-md){
+        font-size: 1.125rem;
+        line-height: 1.8;
+    }
+    @media screen and (min-width:$breakpoint-lg){
+        font-size: 1.25rem;
+        line-height: 1.8;
+    }
+}
+@mixin text-p-medium ($color : rgba($white,0.75)) {
+    color: $color;
+    // font-size: 1.125rem;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    
+    @media screen and (min-width:$breakpoint-md){
+        font-size: 1.25rem;
+        line-height: 1.8;
+    }
+    @media screen and (min-width:$breakpoint-lg){
+        font-size: 1.5rem;
+        line-height: 1.8;
+    }
+}
+@mixin text-p-large ($color : rgba($white,0.75)) {
+    color: $color;
+    // font-size: 1.125rem;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    
+    @media screen and (min-width:$breakpoint-md){
+        font-size: 1.5rem;
+        line-height: 1.8;
+    }
+    @media screen and (min-width:$breakpoint-lg){
+        font-size:2.25rem;
+        line-height: 1.8;
+    }
+}
+@mixin text-p-xl ($color : rgba($white,0.75)) {
+    color: $color;
+    // font-size: 1.125rem;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    
+    @media screen and (min-width:$breakpoint-md){
+        font-size: 1.5rem;
+        line-height: 1.8;
+    }
+    @media screen and (min-width:$breakpoint-lg){
+        font-size:3rem;
+        line-height: 1.4;
+    }
+}
+
+// buttons
+@mixin btn-inline{
+    position: relative;
+    &:before{
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        border-bottom: 2px solid currentColor;
+        opacity: 0;
+        transition: 0.2s;
+        transition-timing-function: cubic-bezier(0.25, 0.75, 0.2, 1);
+    }
+    &:hover{
+        &:before{
+            width: 100%;
+            opacity: 1;
+        }
+    }
+}

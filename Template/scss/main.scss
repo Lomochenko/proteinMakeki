@@ -1,0 +1,88 @@
+// Main SCSS file
+/*
+    Template name : Simpleux - Website template
+    Version : 2.0
+    Author : Miradontsoa Andria
+    Website : http://highhay.com & http://cutekit.net
+    Support : support@cutekit.net
+*/
+
+@import 'doc_content';
+
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+
+/* 0 Initialization & Helpers */
+/* 0.1 Initialization */
+@import "init/init";
+
+/* 0.2 Helpers and Utilities */
+@import 'utilities/utilities';
+
+/* 0.3 Animations & keyframes */
+@import 'animations/animations.scss';
+
+/* 1 Components */
+/* 1.1 Navigation bar, sidebar, dots navigation */
+@import 'components/nav/navbar';
+@import 'components/nav/nav-fullscreen';
+@import 'components/nav/nav-dots';
+@import 'components/nav/nav-sidebar';
+@import 'components/nav/nav-social';
+@import 'components/nav/nav-list';
+
+/* 1.2 Icons */
+@import 'components/icons/icons';
+/* 1.2.a Menu icon */
+@import 'components/icons/icon-menu';
+/* 1.2.b Social network icon */
+@import 'components/icons/icon-social';
+/* 1.2.c Arrow icon */
+
+/* 1.3 Buttons */
+@import 'components/buttons/buttons';
+
+/* 1.4 Cards */
+@import 'components/cards/cards';
+
+/* 1.5 Articles */
+@import 'components/article/article';
+
+/* 1.6 Dropdown */
+@import 'components/dropdown';
+/* 1.7 Forms */
+@import 'components/forms/form';
+/* 1.8 Popup */
+@import 'components/popup/popup';
+
+/* 1.9 Row, Grid, List Items */
+/* 1.9.a Items */
+@import 'components/items/items';
+/* 1.9.b Bootstrap Row Column Container */
+@import 'components/row_col_cont';
+
+/* 1.10 Carousel, slider , scrolls*/
+@import 'components/sliders/slides';
+@import 'components/sliders/sliders';
+@import 'components/scrolls/scrolls';
+
+/* 1.11 Footer */
+@import 'components/footer';
+
+/* 1.12 Others */
+@import 'components/separator';
+
+/* 2 Sections */
+@import 'sections/sections';
+
+/* 3 Page */
+/* 3.1 Page init */
+@import 'page/page';
+/* 3.2 Page cover */
+@import 'page/page-cover';
+/* 3.3 Page footer */
+@import 'page/page-footer';
+
+/* */
+

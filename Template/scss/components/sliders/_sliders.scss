@@ -1,0 +1,14 @@
+
+.swiper-container-fade{
+    .swiper-slide{
+        opacity: 0 !important;
+        // transition: 0.6s !important;
+    }
+    .swiper-slide.swiper-slide-active{
+        opacity: 1 !important;
+    }
+}
+
+@import 'slider/slider-simple-a';
+@import 'slider/slider-simple-b';
+@import 'slider/slider-gallery-a';

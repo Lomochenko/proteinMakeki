@@ -1,0 +1,30 @@
+.page-twocols{
+    position: relative;
+    .cols-container{
+        // grid-template-rows: 80px auto 80px; 
+        // display: block;
+    }
+    .col-fixed{
+        @media screen and (min-width:$breakpoint-lg){
+            position: sticky;
+            // position: relative;
+            top: 0;
+            height: 100vh;
+            align-self: flex-start;
+        }
+    }
+    .col-scroll{
+        @media screen and (min-width:$breakpoint-lg){
+            position: relative;
+            top: 0;
+            .section-content.content-width{
+                max-width: 100%;
+                padding-left: 4rem;
+                padding-left: $margin-x;
+                padding-left: var(--margin-x);
+                padding-right: $margin-x;
+                padding-right: var(--margin-x);
+            }
+        }
+    }
+}

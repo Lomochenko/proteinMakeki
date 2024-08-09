@@ -1,0 +1,181 @@
+// title animation
+.fullpage-anim{
+    .section{
+        .section-title.title-anim{
+            transform: scale(1.2) translateY(-50%);
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+            transition-delay: 0.0s;
+        }
+        &.active{
+            .section-title.title-anim{
+                transform: translateY(-50%);
+                opacity: 1;
+                // transition-delay: 0.3s;
+                transition-delay: 0.6s;
+            }
+        }
+    }
+}
+// item animation
+.fullpage-anim .section {
+    @media (min-width: $breakpoint-md) {
+
+        // translateUp
+        .anim.translateUp {
+            transform: translateY(48px);
+            transition: 0.3s ease-in-out;
+        }
+
+        &.active {
+            .anim.translateUp {
+                transition-delay: 0.3s;
+                transform: none;
+            }
+        }
+
+        // translateDown
+        .anim.translateDown {
+            transform: translateY(-48px);
+            transition: 0.3s ease-in-out;
+        }
+
+        &.active {
+            .anim.translateDown {
+                transition-delay: 0.3s;
+                transform: none;
+            }
+        }
+    }
+}
+
+// overall animation
+.fullpage-anim .section {
+    @media (min-width: 601px) {
+        .anim {
+            .anim-wrapper {
+                overflow: hidden;
+                display: block;
+            }
+            
+            .row.anim-list{
+                > .col{
+                    opacity: 1;
+                    transition: 0.6s;
+                    // transition-timing-function: ease-in;
+                }
+                @for $i from 1 through 12 {
+                    > .col:nth-child(#{$i}) {
+                        opacity: 0;
+                        transform: translateY(48px);
+                    }
+                }
+            }
+
+            .anim-1,
+            .anim-2,
+            .anim-3,
+            .anim-4 {
+                transition: 0.3s;
+                transition-delay: 0s;
+                position: relative;
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            .zoomout-1 {
+                transition: 0.6s;
+                transition-delay: 0s;
+                transform: scale(1.1);
+                opacity: 0; // transition-timing-function: cubic-bezier(.52, .42, 0, 1.01);
+            }
+
+            .fade-2,
+            .fade-3,
+            .fade-4,
+            .fade-1 {
+                opacity: 0;
+                transition: 0.6s;
+                transition-delay: 0s;
+            }
+        }
+
+        &.active {
+            .anim {
+                .row.anim-list {
+                    $begin: 0.6s;
+                    $param: 0.15s;
+    
+                    > .col {
+                        opacity: 1;
+                        transform: none;
+                        transition-delay: 0.6s;
+                    }
+    
+                    @for $i from 1 through 12 {
+                        > .col:nth-child(#{$i}) {
+                            opacity: 1;
+                            transform: none;
+                            // transition-delay: ($begin - $param) + $i*$param + 0.2s;
+                            // transition-delay: ($begin - $param) + $i*$param;
+                            transition-delay: ($i - 1) * $param + $begin;
+                        }
+                    }
+                }
+                .anim-1 {
+                    transform: none;
+                    transition-delay: 0.3s;
+                    opacity: 1;
+                }
+
+                .anim-2 {
+                    transform: none;
+                    transition-delay: 0.5s;
+                    opacity: 1;
+                }
+
+                .anim-3 {
+                    transform: none;
+                    transition-delay: 0.7s;
+                    opacity: 1;
+                }
+
+                .anim-4 {
+                    opacity: 1;
+                    transform: none;
+                    transition-delay: 0.9s;
+                }
+
+                .zoomout-1 {
+                    transform: none;
+                    transition-delay: 0.3s;
+                    opacity: 1;
+                }
+
+                .fade-1 {
+                    opacity: 1;
+                    transform: none;
+                    transition-delay: 0.3s;
+                }
+
+                .fade-2 {
+                    opacity: 1;
+                    transform: none;
+                    transition-delay: 0.5s;
+                }
+
+                .fade-3 {
+                    opacity: 1;
+                    transform: none;
+                    transition-delay: 0.7s;
+                }
+
+                .fade-4 {
+                    opacity: 1;
+                    transform: none;
+                    transition-delay: 0.9s;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+:root {
+    --white: #{$white};
+    --white-primary: #{$white-primary};
+    --black: #{$black};
+    --black-primary: #{$black-primary};
+
+    --white-transp-1: #{$white-transp-1};
+    --white-transp-2: #{$white-transp-2};
+
+    --gray: #{$gray};
+
+    --primary: #{$primary};
+    --secondary: #{$secondary};
+
+    --breakpoint-xs: #{$breakpoint-xs};
+    --breakpoint-sm: #{$breakpoint-sm};
+    --breakpoint-md: #{$breakpoint-md};
+    --breakpoint-lg: #{$breakpoint-lg};
+    --breakpoint-xl: #{$breakpoint-xl};
+    --breakpoint-xxl: #{$breakpoint-xxl};
+
+    --margin-x-sm : #{$margin-x-sm};
+    --margin-y-sm : #{$margin-y-sm};
+    --margin-x-md : #{$margin-x-md};
+    --margin-y-md : #{$margin-y-md};
+    // --margin-x : #{$margin-x};
+    // --margin-y : #{$margin-y};
+    --margin-x : #{$margin-x-sm};
+    --margin-y : #{$margin-y-sm};
+
+    @media screen and (min-width: $breakpoint-md){
+    --margin-x : #{$margin-x-md};
+    --margin-y : #{$margin-y-md};
+    }
+    @media screen and (min-width: $breakpoint-lg){
+    --margin-x : #{$margin-x-lg};
+    --margin-y : #{$margin-y-lg};
+    }
+
+    --font-family-sans-serif: #{inspect($font-family-sans-serif)};
+    --font-family-serif: #{inspect($font-family-serif)};
+    --font-family-monospace: #{inspect($font-family-monospace)};
+
+    --bs-font-sans-serif: #{inspect($font-family-sans-serif)};
+    --bs-font-monospace: #{inspect($font-family-monospace)};
+}

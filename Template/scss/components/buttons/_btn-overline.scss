@@ -1,0 +1,97 @@
+// transparent button with icon 
+// default layout
+// transparent button with icon
+$iconWidth: 2rem;
+
+.btn-overline-a {
+    // $color: currentColor;
+    border: none;
+    background: none;
+    padding: 0.75em 0;
+    position: relative;
+    transition: 0.3s;
+    color: currentColor;
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0.25em;
+        border-top: 2px solid currentColor;
+        transition: 0.3s;
+        transition-timing-function: cubic-bezier(0.25, 0.75, 0.2, 1);
+    }
+
+    &::before {
+        left: 0;
+        right: 100%;
+    }
+
+    &::after {
+        left: 00%;
+        right: 00%;
+        transition-delay: 0.2s;
+    }
+
+    &.bd-thin {
+
+        &::before,
+        &::after {
+            border-width: 1px;
+        }
+    }
+
+    &.btn-xl {
+        padding: 0.25em 0;
+        &::before,
+        &::after {
+            bottom: 0em;
+        }
+    }
+
+    &:focus,
+    &:active,
+    &:hover {
+        // color: $primary;
+        color: currentColor;
+        background: none;
+        opacity: 0.7;
+        outline: none;
+        box-shadow: none;   
+
+        &::before {
+            right: 0%;
+            transition-delay: 0.2s;
+        }
+
+        &::after {
+            left: 100%;
+            transition-delay: 00s;
+        }
+    }
+}
+
+// mixin
+// transparent button with icon
+@mixin button-overline-a($color) {
+    color: $color; // border: 1px solid $color;
+}
+
+// alternative layout
+@each $color,
+$value in $theme-colors {
+    @if $value==$white {
+        .btn-overline-a.btn-white {
+            color: white; // border: 1px solid $color;
+
+            &:hover {
+                color: #eaeaea;
+            }
+        }
+    }
+
+    @else {
+        .btn-overline-a.btn-#{""+$color} {
+            @include button-overline-a($value);
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    // padding-right: 1.25rem;
+    // padding-left: 1.25rem;
+    padding-right: $margin-x-sm;
+    padding-right: var(--margin-x-sm);
+    padding-left: $margin-x-sm;
+    padding-left: var(--margin-x-sm);
+
+    @media screen and (min-width:$breakpoint-md) {
+        padding-right: $margin-x-md;
+        padding-right: var(--margin-x-md);
+        padding-left: $margin-x-md;
+        padding-left: var(--margin-x-md);
+    }
+
+    @media screen and (min-width:$breakpoint-lg) {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+.row.shifted-odd {
+    --shift-width: 8rem;
+    margin-bottom: var(--shift-width);
+    .col:nth-child(2n+1) {
+        @media screen and (min-width:$breakpoint-lg) {
+            // transform: translateY(5rem);
+            position: relative;
+            top: var(--shift-width);
+        }
+    }
+}

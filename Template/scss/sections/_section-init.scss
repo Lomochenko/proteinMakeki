@@ -1,0 +1,14 @@
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    // width: 100%;
+    &.with-overflow{
+        overflow: initial;
+    }
+}
+
+

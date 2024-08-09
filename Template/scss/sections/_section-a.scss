@@ -1,0 +1,57 @@
+.section-a {
+    // overflow-x: hidden;
+    &.child-sticky{
+        overflow: initial;
+    }
+    .title-desc {
+        p {
+            @include text-p();
+        }
+    }
+
+    .title-desc.large-text-size {
+
+        .text-p,
+        p {
+            @include text-p-large(currentColor);
+        }
+    }
+    .title-desc.xl-text-size {
+
+        .text-p,
+        p {
+            @include text-p-xl(currentColor);
+            font-weight: 300;
+            strong,
+            .strong{
+                font-weight: 600;
+                // color: $white;
+            }
+        }
+    }
+
+    .section-body {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        @media screen and(min-width:$breakpoint-lg) {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+    }
+    &.section-pt-0{
+        .section-body{
+            padding-top: 0;
+            @media screen and(min-width:$breakpoint-lg){
+                padding-top: 0;
+            }
+        }
+    }
+    &.section-pb-0{
+        .section-body{
+            padding-bottom: 0;
+            @media screen and(min-width:$breakpoint-lg){
+                padding-bottom: 0;
+            }
+        }
+    }
+}

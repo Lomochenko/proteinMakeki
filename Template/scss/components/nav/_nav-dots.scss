@@ -1,0 +1,68 @@
+@import 'fp-nav';
+
+.nav-dot-container{
+    position: fixed;
+    right: var(--margin-x-sm);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    @media (min-width:$breakpoint-md ){
+        right: var(--margin-x-md);
+    }
+    @media (min-width:$breakpoint-lg ){
+        right: var(--margin-x);
+    }
+}
+.nav-dots{
+    
+    ul, li {
+        list-style: none;
+        margin: 0;
+    }
+    li,.nav-item{
+        margin: 1rem 0;
+    }
+    a, .nav-link{
+        position: relative;
+        display: block;
+        width: 0.5rem;
+        height: 0.5rem;
+        background: rgba(white, 0.3);
+        padding: 0;
+        border-radius: 60px;
+        transition: 0.2s;
+        transition-timing-function: cubic-bezier(0.25, 0.75, 0.2, 1);
+        cursor: pointer;
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border-radius: inherit;
+            transition: 0.2s;
+            transition-timing-function: cubic-bezier(0.25, 0.75, 0.2, 1);
+        }
+        &:after{
+            background: rgba(white, 0.2);
+            transform: scale(0);
+        }
+    }
+    li.active a,
+    .nav-item.active a,
+    a:hover,
+    .nav-link:hover{
+        background: rgba(white, 1);
+        &:after{
+            transform: scale(1);
+        }
+    }
+    li.active a:hover,
+    li.active .nav-link:hover{
+        &:after{
+            background: rgba(white, 0.8);
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.section-title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    // overflow: hidden;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .text {
+        z-index: -1;
+        font-size: 5rem;
+        font-weight: bold;
+        font-weight: 800;
+        margin: 0;
+        opacity: 0.1;
+
+        @media screen and (min-width : $breakpoint-lg) {
+            font-size: 11rem;
+        }
+        &.text-lg{
+            @media screen and (min-width : $breakpoint-lg) {
+                font-weight: 800;
+                font-size: 15rem;
+                line-height: 1;
+            }
+        }
+    }
+    &.z-top{
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    &.title-right {
+        width: auto;
+        height: auto;
+        left: auto;
+        right: 0px;
+        @media screen and (min-width : $breakpoint-lg) {
+            right: calc((100vw - #{$contentWidthLarge})/2);
+        }
+    }
+
+    &.title-left {
+        width: auto;
+        height: auto;
+        // overflow: hidden;
+        right: auto;
+        left: 0;
+        @media screen and (min-width : $breakpoint-lg) {
+            left: calc((100vw - #{$contentWidthLarge})/2);
+        }
+    }
+    
+
+    &.text-vert {
+        overflow: unset;
+        top: 20vh;
+        transform: none;
+        .text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            // transform: translateY(50%) translateY(-30vh);
+            // transform: rotate(90deg) translateX(100%) translateX(-10vh);
+            // transform: rotate(90deg) translateX(100%) translateX(-30vh);
+            // transform-origin: top right;
+
+            
+        }
+    }
+
+    &.title-right-y {
+        // transform: rotate(90deg) translateX(100%) translateX(-50vh);
+        transform: rotate(90deg) translateX(100%) translateX(-30vh);
+        // transform: rotate(90deg) translateX(70%) ;
+        transform-origin: top right;
+        width: auto;
+        height: auto;
+        left: auto;
+        right: calc((100vw - #{$contentWidthLarge})/2);
+        overflow: unset;
+
+        // background: #f4f;
+        .text {
+            @media screen and (min-width : $breakpoint-lg) {
+                font-weight: 800;
+                // font-size: 20rem;
+                font-size: 14rem;
+                line-height: 1;
+            }
+        }
+    }
+}
+
+.section {
+    .sticky-title {
+        position: sticky;
+        top: 200px;
+        // margin-bottom: 120px;
+        transform: translateY(-50%);
+        // background: #f4f;
+        height: fit-content;
+    }
+}

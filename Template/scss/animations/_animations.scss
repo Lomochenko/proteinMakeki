@@ -1,0 +1,14 @@
+.rellax-vert{
+    transform: rotate(90deg);
+    
+    .rellax{
+        transform: rotate(-90deg);
+    }
+}
+
+
+// scroll animation
+@import 'scroll-anim';
+
+// fullpage animation
+@import 'fullpage-anim';

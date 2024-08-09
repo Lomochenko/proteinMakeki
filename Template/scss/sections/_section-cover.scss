@@ -1,0 +1,92 @@
+.section-cover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .bg-layer{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bg-part {
+        min-height: 100%;
+    }
+
+    .bg-wrapper {
+        position: relative;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    img {
+        width: 100%;
+    }
+    .fill-width{
+        width: 100%;
+    }
+
+    .fit {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    .img-full,
+    .img-cover,
+    .bg-cover-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .img-box{
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: calc(100% - var(--margin-x-sm)*2);
+        height: 70vh;
+        @media screen and(min-width: $breakpoint-lg){
+            width: 40vw;
+            height: 60vh;
+            &.box-md{
+                width: 36rem;
+                height: 30rem;
+            }
+        }
+    }
+    .img-md-box{
+        @media screen and(min-width: $breakpoint-md){
+            top: auto;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            width: 40vw;
+            height: 60vh;
+        }
+    }
+    .img-lg-box{
+        @media screen and(min-width: $breakpoint-lg){
+            top: auto;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            width: 50vw;
+            height: 66vh;
+        }
+    }
+
+}

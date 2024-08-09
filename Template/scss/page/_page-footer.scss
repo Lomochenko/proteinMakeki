@@ -1,0 +1,62 @@
+.footer-page{
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    transition: 0.3s;
+    position: relative;
+    padding: $margin-x-sm;
+    padding: var(--margin-x-sm);
+    z-index: 5;
+    pointer-events: none;
+    > *{
+        pointer-events: visible;
+    }
+    
+    @media screen and (min-width : $breakpoint-md) {
+        left: $margin-x-md;
+        left: var(--margin-x-md);
+        right: $margin-x-md;
+        right: var(--margin-x-md);
+        bottom: $margin-y-md;
+        bottom: var(--margin-y-md);
+        position: absolute;
+    }
+    @media screen and (min-width : $breakpoint-lg) {
+        left: $margin-x;
+        left: var(--margin-x);
+        right: $margin-x;
+        right: var(--margin-x);
+        bottom: $margin-y;
+        bottom: var(--margin-y);
+        position: fixed;
+    }
+    .footer-left{
+        position: relative;
+        left: 0;
+        bottom: 0;
+        @media screen and (min-width : $breakpoint-md) {
+            position: absolute;
+        }
+    }
+    .footer-right{
+        position: relative;
+        right: 0;
+        bottom: 0;
+        margin-top: 1rem;
+        @media screen and (min-width : $breakpoint-md) {
+            position: absolute;
+        }
+    }
+    .note{
+        color: rgba($white,0.5);
+        margin-bottom: 0;
+        .marked{
+            font-weight: 500;
+        }
+        a{
+            text-decoration: none;
+            color: $white;
+        }
+    }
+}

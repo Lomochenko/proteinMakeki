@@ -1,0 +1,178 @@
+.strong {
+    font-weight: bold;
+}
+
+.text-sm {
+    font-size: $text-sm;
+}
+.text-p-xl{
+    p{
+        @include text-p-xl(currentColor);
+        font-weight: 300;
+        strong,
+        .strong{
+            font-weight: 600;
+            // color: $white;
+        }
+    }
+}
+.text-p-lg{
+    p {
+        @include text-p-large(currentColor);
+    }
+}
+.text-p-md{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    p {
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: 2rem;
+            line-height: 1.5;
+        }
+    }
+}
+.text-p-mm{
+    p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+}
+
+.display-3 {
+    font-weight: bold;
+    line-height: 1;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        font-size: 4rem !important;
+    }
+}
+
+.display-4 {
+    font-weight: bold;
+    line-height: 1;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        font-size: 3.5rem !important;
+    }
+}
+
+// display-title
+.display-title-1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+
+    @media screen and (min-width : $breakpoint-md) {
+        font-size: 4.5rem;
+        // font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    @media screen and (min-width : $breakpoint-lg) {
+        font-size: 5rem;
+        // font-weight: bold;
+    }
+
+}
+
+.display-title-2 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+
+    @media screen and (min-width : $breakpoint-md) {
+        font-size: 5.5rem;
+        // font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    @media screen and (min-width : $breakpoint-lg) {
+        font-size: 7.5rem;
+        // font-weight: bold;
+    }
+
+}
+.display-title-3 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+
+    @media screen and (min-width : $breakpoint-md) {
+        font-size: 7.5rem;
+        // font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    @media screen and (min-width : $breakpoint-lg) {
+        font-size: 9rem;
+        // font-weight: bold;
+    }
+
+}
+.display-title-4 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+
+    @media screen and (min-width : $breakpoint-md) {
+        font-size: 4.5rem;
+        // font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    @media screen and (min-width : $breakpoint-lg) {
+        font-size: 6rem;
+        // font-weight: bold;
+    }
+
+}
+
+.text-muted-1 {
+    // opacity: 0.5;
+    opacity: percentage(1/2);
+}
+
+.text-muted-2 {
+    opacity: percentage(2/3);
+}
+.text-muted-3 {
+    opacity: percentage(1/3);
+}
+
+.text-spaced {
+    letter-spacing: 0.2em;
+}
+
+.inline-text {
+    display: inline;
+}
+
+.text-stroke {
+    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 1px var(--white, #ffffff);
+    color: transparent;
+}
+
+.text-shadow {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.text-left{
+    text-align: left !important;
+}
+.text-right{
+    text-align: right !important;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.lh-sm{
+    line-height: 1.2;
+}
+.lh-md{
+    line-height: 1.4;
+}
+.lh-lg{
+    line-height: 1.7;
+}

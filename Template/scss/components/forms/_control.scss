@@ -1,0 +1,53 @@
+.form-control{
+    background: rgba(white, 0.1);
+    background: transparent;
+    color: $white;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid $white;
+    position: relative;
+    // &:required:invalid{
+    &:required:focus:invalid{
+        border-bottom: 2px solid $red;
+    }
+}
+.form-control ~ .input-alert{
+    visibility: hidden;
+}
+
+.form-control-a{
+    background: rgba(white, 0.1);
+    background: transparent;
+    color: $white;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid $white;
+}
+textarea.form-control-a{
+    background: rgba(white, 0.1);
+    min-height: 120px;
+}
+.form-control-b{
+    background: rgba(white, 0.1);
+    color: $white;
+    border: none;
+    border-radius: 0;
+    border: 2px solid $white;
+}
+textarea.form-control-b{
+    min-height: 120px;
+}
+
+.form-a:focus-within{
+    .form-control:required:invalid{
+        border-bottom: 2px solid $white;
+    }
+    .form-control:required:invalid ~ .input-alert{
+        visibility: visible;
+        color: $white;
+    }
+    .form-control:required:focus:invalid ~ .input-alert{
+        visibility: visible;
+        color: $red;
+    }
+}

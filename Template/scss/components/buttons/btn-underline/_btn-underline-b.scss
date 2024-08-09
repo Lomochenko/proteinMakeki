@@ -1,0 +1,104 @@
+// transparent button with icon 
+// default layout
+// transparent button with icon
+$iconWidth: 2rem;
+
+.btn-underline-b {
+    // $color: currentColor;
+    border: none;
+    background: none;
+    padding: 0;
+    padding-bottom: 0.75em;
+    padding-top: 0;
+    position: relative;
+    transition: 0.3s;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: auto;
+        bottom: 0.25em;
+        height: 1px;
+        background-color:  currentColor;
+        transition: 0.3s transform;
+        // transition-timing-function: cubic-bezier(0.25, 0.75, 0.2, 1);
+    }
+
+    &::before {
+        left: 0;
+        // right: 100%;
+        width: 100%;
+        transform: scaleX(0);
+        transform-origin:  top right;
+    }
+
+
+    &.bd-thin {
+
+        &::before {
+            border-width: 1px;
+        }
+    }
+
+    &.btn-lg {
+        font-size: 1.25rem;
+        padding: 0;
+        padding-bottom: 0.125em;
+        &::before {
+            bottom: 0em;
+        }
+    }
+
+    &.btn-xl {
+        padding: 0;
+        padding-bottom: 0.25em;
+        &::before {
+            bottom: 0em;
+        }
+    }
+
+    &:focus,
+    &:active,
+    &:hover {
+        // color: $primary;
+        background: none;
+        opacity: 0.7;
+        outline: none;
+        box-shadow: none;
+        color: currentColor;
+
+        &::before {
+            // right: 0%;
+            transform: scaleX(1);
+            // transition-delay: 0.2s;
+            transform-origin: top left;
+        }
+
+    }
+}
+
+// mixin
+// transparent button with icon
+@mixin button-underline-b($color) {
+    color: $color; // border: 1px solid $color;
+}
+
+// alternative layout
+@each $color,
+$value in $theme-colors {
+    @if $value==$white {
+        .btn-underline-b.btn-white {
+            color: white; // border: 1px solid $color;
+
+            &:hover {
+                color: #eaeaea;
+            }
+        }
+    }
+
+    @else {
+        .btn-underline-b.btn-#{""+$color} {
+            @include button-underline-b($value);
+        }
+    }
+}

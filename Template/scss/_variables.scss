@@ -1,0 +1,100 @@
+// COLORS
+$primary: #BB2464;
+$secondary: #3d4963;
+
+$red: #f44;
+
+$white: #ffffff;
+$white-primary: #ffeff5;
+$white-transp-1: rgba(white,0.7);
+$white-transp-2: rgba(white,0.3);
+
+$black: #1b1919;
+$black-primary: #272123;
+$gray: #8b8b8b;
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  
+  white: $white,
+  black: $black,
+);
+
+
+// FONT FAMILY
+// sans
+$font-family-sans-serif : // Add here customize webfont
+    "SF Pro Display",
+    "Segoe UI",
+    "Noto Sans",
+    "Roboto",
+    "Helvetica",
+    "Opensans",
+    // Safari for OS X and iOS (San Francisco)
+    -apple-system,
+    // Chrome >= 56 for OS X (San Francisco), Windows, Linux and Android
+    system-ui,
+    // Chrome < 56 for OS X (San Francisco)
+    BlinkMacSystemFont,
+    sans-serif;
+    // $sans : $sans-serif;
+    // $font-family-sans-serif : $sans-serif;
+
+// serif
+$font-family-serif : "Times New Roman",
+serif;
+$serif-article : "Times New Roman",
+serif;
+
+// monospace
+$font-family-monospace: "SFMono-Regular",
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    "Courier New",
+    monospace;
+
+
+// FONT SIZE
+$text-size : 1rem;
+$text-sm : 0.875rem;
+$text-md : 1rem;
+$text-lg : 1.5rem;
+$text-xl : 2rem;
+$text-xxl : 3rem;
+
+
+// DEVICE BREAKPOINT SIZE
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px; // 62rem = 992px old : 1024
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px; //1600
+
+$grid-breakpoints: (xs: $breakpoint-xs,
+    sm: $breakpoint-sm,
+    md: $breakpoint-md,
+    lg: $breakpoint-lg,
+    xl: $breakpoint-xl,
+    xxl: $breakpoint-xxl) !default;
+
+
+// CONTENT WIDTH
+$contentWidthSmall: 40rem;
+$contentWidthMedium: 48rem;
+$contentWidthLarge: 60rem;
+$contentWidthXL: 70rem;
+
+// Page margin
+$margin-x-sm : 24px;
+$margin-y-sm : 24px;
+$margin-x-md : 32px;
+$margin-y-md : 32px;
+$margin-x-lg : 64px;
+$margin-y-lg : 40px;
+$margin-x : 64px;
+$margin-y : 40px;
+$sectionMarginLg: 8rem;
+$blockPaddingLg: 6rem;

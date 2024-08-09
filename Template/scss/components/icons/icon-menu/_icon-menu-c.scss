@@ -1,0 +1,120 @@
+
+// icon menu b
+.icon-menu-c {
+    $iconWidth: 32px;
+    $barWidth: 2.0px;
+    $barSpace: 4px;
+    color: currentColor;
+    // color: #f4f;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: transparent;
+    border-radius: 2px;
+    opacity: 1;
+
+    .text {
+        position: absolute;
+        text-align: left;
+        top: 13px;
+        line-height: 1;
+        right: 100%;
+        padding-right: 8px;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: currentColor;
+        transition: 0.3s;
+
+        @media (min-width: $breakpoint-md) {
+            top: -100%;
+            right: auto;
+            left: -20%;
+            transform: rotate(-90deg);
+        }
+
+        &.hide-menu-visible {
+            visibility: visible;
+            opacity: 1;
+            top: -100%;
+        }
+
+        &.show-menu-visible {
+            visibility: hidden;
+            opacity: 0;
+            top: -200%;
+        }
+
+    }
+
+    .bars {
+        width: $iconWidth;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transform: translateY(-$barWidth/2);
+    }
+
+    .bar1,
+    .bar2 {
+        display: flex;
+        height: $barWidth;
+        background: currentColor;
+        width: 100%;
+        transition: 0.3s;
+        position: absolute;
+        top: 50%;
+    }
+
+    .bar1 {
+        transform: translateY(-$barSpace - $barWidth);
+        width: 100%;
+    }
+
+    .bar2 {
+        transform: translateY($barSpace + $barWidth);
+        width: 100%;
+    }
+
+    // &.bars-spaced {
+    //     .bar1 {
+    //         transform: translateY((-$barSpace - $barWidth)*2);
+    //     }
+
+    //     .bar3 {
+    //         transform: translateY(($barSpace + $barWidth)*2);
+    //     }
+    // }
+}
+
+.navbar-toggler[aria-expanded="true"] .icon-menu-c,
+.icon-menu-c.menu-visible {
+    .text {
+        &.show-menu-visible {
+            visibility: visible;
+            opacity: 1;
+            top: -100%;
+        }
+
+        &.hide-menu-visible {
+            visibility: hidden;
+            opacity: 0;
+            top: -200%;
+        }
+    }
+
+    .bar1 {
+        width: 100%;
+        transform: rotate(45deg) scaleX(0.8);
+        transform-origin: center;
+    }
+
+    .bar2 {
+        width: 100%;
+        transform: rotate(-45deg) scaleX(0.8);
+        transform-origin: center;
+    }
+
+}
+
+

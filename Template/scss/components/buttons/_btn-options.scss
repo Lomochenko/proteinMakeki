@@ -1,0 +1,7 @@
+.btn-xl{
+    font-size: 2rem;
+    line-height: 1;
+    @media screen and (min-width : $breakpoint-md) {
+        font-size: 3rem;
+    }
+}

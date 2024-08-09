@@ -1,0 +1,37 @@
+.article-a{
+    h2,
+    .title{
+        font-size: 4rem;
+        line-height: 1.2;
+        font-weight: 700;
+        margin-bottom: 0.5em;
+    }
+    h3{
+        font-size: 3rem;
+        line-height: 1.2;
+        font-weight: 700;
+        margin-bottom: 0.25em;
+    }
+    .subtitle{
+        @include text-p-medium(currentColor);
+        @media screen and(min-width:$breakpoint-lg){
+            max-width: 50%;
+        }
+    }
+    p{
+        @include text-p();
+    }
+    & > p{
+        @media screen and(min-width:$breakpoint-lg){
+            max-width: 75%;
+            max-width: $contentWidthSmall;
+        }
+    }
+    hr{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border: none;
+        border-bottom: 2px solid currentColor;
+        opacity: 0.1;
+    }
+}
