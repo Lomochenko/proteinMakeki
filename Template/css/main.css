@@ -6827,8 +6827,9 @@ body.scrolled .hero-item-b .hero-footer {
   color: #ffffff;
 }
 .credit{
-  color: var(--bs-teal);
+  color: var(--bs-danger);
   text-decoration: none;
+  font-weight: bold;
 }
 .credit:hover{
   color: inherit;
