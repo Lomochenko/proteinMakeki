@@ -5811,20 +5811,20 @@ a.item-image-f:hover img:not(.no-zoom) {
 
 .section-contact .dep-address {
   color: rgba(255, 255, 255, 0.75);
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.7;
 }
 
 @media screen and (min-width: 768px) {
   .section-contact .dep-address {
-    font-size: 1.125rem;
+    font-size: 1.625rem;
     line-height: 1.8;
   }
 }
 
 @media screen and (min-width: 992px) {
   .section-contact .dep-address {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     line-height: 1.8;
   }
 }
@@ -6825,6 +6825,14 @@ body.scrolled .hero-item-b .hero-footer {
 .footer-page .note a {
   text-decoration: none;
   color: #ffffff;
+}
+.credit{
+  color: var(--bs-teal);
+  text-decoration: none;
+}
+.credit:hover{
+  color: inherit;
+  border-bottom: 1px solid;
 }
 
 /* */
