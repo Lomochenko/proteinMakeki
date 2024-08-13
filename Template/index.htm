@@ -43,64 +43,80 @@
     </div>
   </div>
   <!-- Begin of navigation bar .navbar-top -->
-  <header class="navbar-top navbar navbar-a navbar-expand-lg change-on-section-color">
+  <header class="navbar-top navbar navbar-a navbar-expand-lg navbar-dark">
     <nav class="container-fluid px-0">
 
       <!-- Logo -->
       <a class="navbar-brand" href="demo.html">
         <span class="logo">
           <img class="light-logo" src="img/logo.svg" alt="Simpleux Template">
-          <img class="dark-logo" src="img/logo_dark.svg" alt="Simpleux Template">
         </span>
         <span class="text ms-3">
-          <span class="line strong">Arnaud Smith</span>
-          <span class="line sub">Portfolio Page</span>
+          <span class="line strong">M A L E K I</span>
+          <span class="line sub">PROTEIN</span>
         </span>
       </a>
 
+      <!-- Call to action -->
+      <ul class="navbar-nav order-lg-2 ms-md-4 me-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fs-4" href="#" id="navbarTopDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            خرید
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarTopDropdown">
+            <li><a class="dropdown-item text-right fs-5" href="index.htm">ورود<i
+                  class="ion ion-md-person me-2 fs-5"></i></a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item text-right" href="index.htm">ثبت سفارش<i
+                  class="ion ion-md-add-circle me-2 fs-5"></i></a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item text-right" href="index.htm">سبد خرید<i
+                  class="ion ion-ios-basket me-2 fs-5"></i></a></li>
+          </ul>
+        </li>
+      </ul>
       <!-- Menu button -->
-      <button class="navbar-toggler order-lg-2 ms-5 " type="button" data-bs-toggle="collapse"
+      <button class="navbar-toggler order-lg-3" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarMenuCollapse" aria-controls="navbarMenuCollapse" aria-expanded="false"
         aria-label="Toggle navigation">
-        <span class="icon icon-menu icon-menu-c">
+        <span class="icon icon-menu icon-menu-a">
           <span class="bars">
             <span class="bar1"></span>
             <span class="bar2"></span>
+            <span class="bar3"></span>
           </span>
         </span>
       </button>
 
       <!-- Navigation menu -->
       <div class="collapse navbar-collapse order-lg-1" id="navbarMenuCollapse">
-        <div class="navbar-menu-wrapper ">
+        <div class="navbar-menu-wrapper">
           <div class="nav-body">
             <!-- Menu links at top -->
-            <ul class="navbar-nav nav-menu-top">
-              <li class="nav-item" data-section-anchor="about">
-                <a class="nav-link" aria-current="page" href="#about">About</a>
-              </li>
-              <li class="nav-item" data-section-anchor="projects">
-                <a class="nav-link" aria-current="page" href="#projects">Works</a>
-              </li>
-              <li class="nav-item" data-section-anchor="contact">
-                <a class="nav-link" aria-current="page" href="#contact">Contact</a>
-              </li>
-            </ul>
+
 
             <!-- Fullscreen menu on large devices -->
             <div class="nav-fullscreen-lg">
-              <ul class="navbar-nav nav">
+              <ul class="navbar-nav nav text-right">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="demo.html#home">Home</a>
+                  <a class="nav-link" aria-current="page" href="demo.html#home">خانه</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="demo.html#gallery">Gallery</a>
+                  <a class="nav-link pt-0" href="demo.html">محصولات</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="demo.html#item">Item</a>
+                  <a class="nav-link" href="demo.html#item">درباره ما</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="demo.html">Demo</a>
+                  <a class="nav-link" href="demo.html#gallery">گالری</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="demo.html">بلاگ</a>
                 </li>
               </ul>
             </div>
@@ -112,6 +128,7 @@
               <ul>
                 <li class="nav-item">
                   <a class="nav-link btn" href="#">
+                    instagram
                     <span class="icon">
                       <i class="ion ion-logo-instagram"></i>
                     </span>
@@ -146,7 +163,7 @@
             <div class="content-col col-12 text-right">
               <!-- title and description -->
               <div class="title-desc">
-                <h2 class="display-5 lh-md  anim-1" data-anim-visible="by-letter" data-anim-start="0.0"
+                <h2 class="display-5 lh-md  anim-1" data-anim-visible="zoom-in" data-anim-start="0.0"
                   data-anim-letter-delay="0.02" data-anim-line-delay="0.2"><span class="fw-bold">Simpleux</span> <span
                     class="text-muted-1">–</span> A simple description about the website or the product
                   should be placed here. It tells what this company can do.
@@ -170,22 +187,28 @@
       <footer class="hero-footer">
         <div class="section-footer-left footer-scrolldown">
           <a class="btn-scrolldown-b" href="#about">
+            <span class="text ms-2">ما کی هستیم</span>
             <span class="icon icon-scrolldown"></span>
-            <span class="text">Scroll to explore</span>
           </a>
         </div>
         <div class="section-footer-right">
           <nav class="nav-social nav-social-b d-none d-lg-block">
-            <ul>
+            <div class="fs-6">
+              ارسال از 8 صبح تا 12 شب
+            </div>
+            <!-- <ul>
               <li class="nav-item">
                 <a class="nav-link btn fs-3" href="#">
                   instagram
                 </a>
               </li>
-            </ul>
+            </ul> -->
           </nav>
           <nav class="nav-social nav-social-a  d-block d-lg-none">
-            <ul>
+            <div>
+              ارسال از 8 صبح تا 12 شب 
+            </div>
+            <!-- <ul>
               <li class="nav-item">
                 <a class="nav-link btn" href="#">
                   <span>instagram</span>
@@ -194,7 +217,7 @@
                   </span>
                 </a>
               </li>
-            </ul>
+            </ul> -->
           </nav>
         </div>
       </footer>
@@ -231,9 +254,7 @@
                       <img src="img/items/img-sample2.jpg" alt="image">
                     </div>
                     <div class="item-content">
-                      <h5 class="subtitle speed-1">Projects</h5>
-                      <h3 class="title speed-3">Alfa Dizeing</h3>
-                      <h4 class="category speed-2">Branding, Website</h4>
+                      <h3 class="text-right title speed-3">گوشت سرد</h3>
                     </div>
                   </div>
                 </div>
@@ -243,9 +264,7 @@
                       <img src="img/items/img-sample3.jpg" alt="image">
                     </div>
                     <div class="item-content">
-                      <h5 class="subtitle speed-1">Projects</h5>
-                      <h3 class="title speed-3">Bureauss</h3>
-                      <h4 class="category speed-2">Branding, Website</h4>
+                      <h3 class="text-right title speed-3">Bureauss</h3>
                     </div>
                   </div>
                 </div>
@@ -255,9 +274,7 @@
                       <img src="img/items/img-sample5.jpg" alt="image">
                     </div>
                     <div class="item-content">
-                      <h5 class="subtitle speed-1">Projects</h5>
-                      <h3 class="title speed-3">Paintus</h3>
-                      <h4 class="category speed-2">Branding, Website</h4>
+                      <h3 class="text-right title speed-3">Paintus</h3>
                     </div>
                   </div>
                 </div>
@@ -267,9 +284,7 @@
                       <img src="img/items/img-sample1.jpg" alt="image">
                     </div>
                     <div class="item-content">
-                      <h5 class="subtitle speed-1">Projects</h5>
-                      <h3 class="title speed-3">Dekoris</h3>
-                      <h4 class="category speed-2">Branding, Website</h4>
+                      <h3 class="text-right title speed-3">Dekoris</h3>
                     </div>
                   </div>
                 </div>
@@ -301,7 +316,7 @@
       <div class="section-title title-anim overflow-hidden">
         <h2 class="text text-stroke text-lg rellax" data-rellax-horizontal data-rellax-speed="-4"
           data-rellax-percentage="0.5">
-          About</h2>
+          About Us</h2>
       </div>
       <!-- Begin of section body -->
       <div class="section-body">
@@ -310,8 +325,9 @@
           <div class="row">
             <div class="col-12 col-lg-12 text-right">
               <!-- title and description -->
-              <div class="title-desc xl-text-size">
-                <p class="anim-1 inline-text" data-anim-visible="by-letter">
+              <div class="title-desc xl-text-size " data-anim-visible="zoom-in" data-anim-start="0.0"
+                data-anim-line-delay="0.2">
+                <p class="anim-1 inline-text">
                   We are a digital agency, <strong>focused</strong> in making good and useful product for clients and
                   corporations. Our main <span class="text-primary">mission</span> or a description about us is placed
                   here.</p>
@@ -328,10 +344,19 @@
       <!-- content -->
       <div class="section-content container content-width anim">
         <div class="part-wrapper">
-          <div class="row g-5">
+          <div class="row flex-column-reverse flex-md-row g-5">
+            <div class="col-12 col-lg-6 d-flex align-items-center">
+              <div class="title-desc" data-anim-visible="fade-up" data-anim-start="0.6" data-anim-line-delay="0.2">
+                <p class="anim-1 inline-text fs-3">
+                  We are a digital agency, <strong>MALEKI</strong> in making good and useful product for clients and
+                  corporations. Our main or a description about us is placed
+                  here.</p>
+              </div>
+            </div>
             <div class="col-12 col-lg-6">
               <!-- card -->
-              <div class="item item-image-c rounded-md" data-anim-visible='fade'>
+              <div class="item item-image-c rounded-md" data-anim-visible="fade-up" data-anim-start="0.3"
+                data-anim-line-delay="0.2">
                 <div class="item-img">
                   <img class="fit" src="img/items/img-square-1.jpg" alt="team member">
                 </div>
@@ -343,14 +368,6 @@
                 </div>
               </div>
               <!-- end of card -->
-            </div>
-            <div class="col-12 col-lg-6 d-flex align-items-center">
-              <div class="title-desc" data-anim-visible='fade'>
-                <p class="anim-1 inline-text fs-3" data-anim-visible="by-letter">
-                  We are a digital agency, <strong>MALEKI</strong> in making good and useful product for clients and
-                  corporations. Our main or a description about us is placed
-                  here.</p>
-              </div>
             </div>
           </div>
         </div>

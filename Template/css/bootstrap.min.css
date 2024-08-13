@@ -3698,7 +3698,7 @@ fieldset:disabled .btn {
 
 .dropdown-toggle::after {
     display: inline-block;
-    margin-left: .255em;
+    margin-right: .255em;
     vertical-align: .255em;
     content: "";
     border-top: .3em solid;
@@ -4173,7 +4173,7 @@ fieldset:disabled .btn {
 .nav-link {
     display: block;
     padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
-    font-size: var(--bs-nav-link-font-size);
+    font-size: 1.5rem;
     font-weight: var(--bs-nav-link-font-weight);
     color: var(--bs-nav-link-color);
     text-decoration: none;
