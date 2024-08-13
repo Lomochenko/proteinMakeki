@@ -82,11 +82,11 @@
   --margin-y-md: 32px;
   --margin-x: 24px;
   --margin-y: 24px;
-  --font-family-sans-serif: "SF Pro Display", "Segoe UI", "Noto Sans", "Roboto", "Helvetica", "Opensans", -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
-  --font-family-serif: "Times New Roman", serif;
-  --font-family-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-font-sans-serif: "SF Pro Display", "Segoe UI", "Noto Sans", "Roboto", "Helvetica", "Opensans", -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
-  --bs-font-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-sans-serif: 'amiri', sans-serif;
+  --font-family-serif: 'amiri', sans-serif;
+  --font-family-monospace: 'amiri', sans-serif;
+  --bs-font-sans-serif: 'amiri', sans-serif;
+  --bs-font-monospace: 'amiri', sans-serif
 }
 
 @media screen and (min-width: 768px) {
@@ -101,6 +101,12 @@
     --margin-x: 64px;
     --margin-y: 40px;
   }
+}
+
+/* font */
+@font-face {
+  font-family: amiri;
+  src: url(../fonts/Amiri-Regular.ttf);
 }
 
 html {
