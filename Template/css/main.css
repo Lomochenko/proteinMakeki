@@ -5744,10 +5744,10 @@ a.item-image-f:hover img:not(.no-zoom) {
   max-width: 48rem;
 }
 
-.section-content.content-width-lg,
+/* .section-content.content-width-lg,
 .section-content.content-width {
   max-width: 60rem;
-}
+} */
 
 @media screen and (min-width: 1200px) {
 
@@ -5825,14 +5825,14 @@ a.item-image-f:hover img:not(.no-zoom) {
 
 @media screen and (min-width: 768px) {
   .section-contact .dep-address {
-    font-size: 1.625rem;
+    /* font-size: 1.625rem; */
     line-height: 1.8;
   }
 }
 
 @media screen and (min-width: 992px) {
   .section-contact .dep-address {
-    font-size: 1.75rem;
+    /* font-size: 1.75rem; */
     line-height: 1.8;
   }
 }
