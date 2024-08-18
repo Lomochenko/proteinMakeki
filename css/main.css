@@ -3473,12 +3473,13 @@ body.menu-visible .navbar-a.hide-header {
 
 /* 1.7 Forms */
 .form-control {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--black);
   background: transparent;
   color: #ffffff;
   border: none;
   border-radius: 0;
-  border-bottom: 2px solid #ffffff;
+  border: 2px solid var(--gray);
+  border-radius: .375rem;
   position: relative;
 }
 
@@ -3491,7 +3492,7 @@ body.menu-visible .navbar-a.hide-header {
 }
 
 .form-control-a {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--black);
   background: transparent;
   color: #ffffff;
   border: none;
@@ -3500,16 +3501,22 @@ body.menu-visible .navbar-a.hide-header {
 }
 
 textarea.form-control-a {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--black);
   min-height: 120px;
 }
 
 .form-control-b {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--black);
   color: #ffffff;
   border: none;
   border-radius: 0;
   border: 2px solid #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .phone-w{
+    width: 75%;
+  }
 }
 
 textarea.form-control-b {
@@ -4022,11 +4029,11 @@ a.item-feature-c {
   transition: 0.3s;
 }
 
-a.item-image-b:hover {
+div.item-image-b:hover {
   color: currentColor;
 }
 
-a.item-image-b:hover::before {
+div.item-image-b::before {
   opacity: 1;
   visibility: visible;
   top: -1rem;
@@ -4035,7 +4042,7 @@ a.item-image-b:hover::before {
   bottom: -1rem;
 }
 
-a.item-image-b:hover img:not(.no-zoom) {
+div.item-image-b:hover img:not(.no-zoom) {
   transform: scale(1.2);
   transition: 5s linear;
 }
