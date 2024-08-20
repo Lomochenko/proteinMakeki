@@ -1296,6 +1296,11 @@ body::-webkit-scrollbar-thumb {
   transition-timing-function: cubic-bezier(0.25, 0.75, 0.2, 1);
   transform: scale(1.1);
 }
+.basket-alert{
+  position: absolute;
+  top: 4.5rem;
+  right: 0.09rem;
+}
 
 /* @media screen and (min-width: 992px) {
   .navbar-a .dropdown-menu {

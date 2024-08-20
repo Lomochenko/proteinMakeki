@@ -62,7 +62,12 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle fs-4" href="#" id="navbarTopDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        خرید
+                        ثبت سفارش
+                        <!-- red circle (NEW ALERT) -->
+                        <span
+                            class="position-absolute bottom-50 start-100 p-2 bg-danger border border-dark rounded-circle ms-1">
+                            <span class="visually-hidden">هشدار جدید</span>
+                        </span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarTopDropdown">
                         <li><a class="dropdown-item text-right fs-5" href="index.htm">ورود<i
@@ -70,13 +75,18 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item text-right" href="index.htm">ثبت سفارش<i
-                                    class="ion ion-md-add-circle me-2 fs-5"></i></a></li>
+                        <li><a class="dropdown-item text-right" href="index.htm">سبد خرید<i
+                                    class="ion ion-ios-basket me-2 fs-5"></i></a><!-- red circle (NEW ALERT) -->
+                                    <span
+                                        class="basket-alert p-2 bg-danger border border-dark rounded-circle ms-1">
+                                        <span class="visually-hidden">هشدار جدید</span>
+                                    </span></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item text-right" href="index.htm">سبد خرید<i
-                                    class="ion ion-ios-basket me-2 fs-5"></i></a></li>
+                        <li><a class="dropdown-item text-right" href="tel:09123456789">سفارش تلفنی<i
+                                    class="ion ion-md-phone-portrait me-2 fs-5"></i></a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -169,8 +179,13 @@
                         </div>
                         <div class="col-12 mb-2 mb-lg-0 text-right" data-anim-visible="fade">
                             <ul class="products-div px-0 pb-2">
-                                <li class="d-lg-none me-0"><i class="ion ion-md-return-left mt-5 fs-3" data-anim-visible="zoom-in" data-anim-start="1.5" data-anim-line-delay="0"></i></li>
-                                <li class="me-0"><a class="btn btn-outline btn-white rounded-pill" href="#about">گوسفندی</a></li>
+                                <!-- left arrow in PHONE -->
+                                <li class="d-lg-none me-0"><i class="ion ion-md-return-left mt-5 fs-3"
+                                        data-anim-visible="zoom-in" data-anim-start="1.5" data-anim-line-delay="0"></i>
+                                </li>
+                                <!--  -->
+                                <li class="me-0"><a class="btn btn-outline btn-white rounded-pill"
+                                        href="#about">گوسفندی</a></li>
                                 <!--  -->
                                 <li><a class="btn btn-outline btn-white rounded-pill" href="#about">گوساله</a></li>
                                 <!--  -->
@@ -184,7 +199,8 @@
                                 <!--  -->
                                 <li><a class="btn btn-outline btn-white rounded-pill" href="#about">جوجه کباب</a></li>
                                 <!--  -->
-                                <li><a class="btn btn-outline btn-white rounded-pill" href="#about">محصولات دیگر</a></li>
+                                <li><a class="btn btn-outline btn-white rounded-pill" href="#about">محصولات دیگر</a>
+                                </li>
                                 <!--  -->
 
                             </ul>
@@ -224,7 +240,7 @@
                                                 <label for="weight">(KG)</label>
                                                 <div class="input-group">
                                                     <input type="number" name="weight" id="weight" min="0.5" max="1000"
-                                                        step="0.5" value="1" class="form-control text-left fs-5">
+                                                        step="0.5" placeholder="0" class="form-control text-left fs-5">
                                                     <input type="submit"
                                                         class="input-group-text bg-success text-light fs-5"
                                                         value="افزودن به سبد خرید">
