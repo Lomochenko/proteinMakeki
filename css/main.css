@@ -5452,6 +5452,7 @@ a.item-image-f:hover img:not(.no-zoom) {
   position: sticky;
   top: 128px;
   overflow-x: scroll;
+  overflow-y: hidden !important;
 }
 
 .scroll-simple-a .scroll-slides {
