@@ -5451,7 +5451,7 @@ a.item-image-f:hover img:not(.no-zoom) {
   position: -webkit-sticky;
   position: sticky;
   top: 128px;
-  overflow-x: hidden;
+  overflow-x: scroll !important;
 }
 
 .scroll-simple-a .scroll-slides {
@@ -6960,6 +6960,24 @@ body.scrolled .hero-item-b .hero-footer {
 }
 
 .products-div::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  /* -webkit-box-shadow: rgba(27, 25, 25); */
+  background-color: #F5F5F5;
+}
+
+/* index.html */
+/* custom scrollbar (products div) */
+.scroll-wrapper::-webkit-scrollbar-track {
+  background-color: #00152e00;
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  /* background-color: #F5F5F5; */
+}
+
+.scroll-wrapper::-webkit-scrollbar-thumb {
   border-radius: 10px;
 
   /* -webkit-box-shadow: rgba(27, 25, 25); */
