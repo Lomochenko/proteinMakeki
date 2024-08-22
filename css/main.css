@@ -6893,14 +6893,16 @@ body.scrolled .hero-item-b .hero-footer {
 .my-form__actions {
   display: flex;
   flex-direction: column;
-  color: var(--secondary);
+  color: var(--white-primary);
   gap: 16px;
   margin-top: 8px;
 }
 
 .my-form__actions a {
-  color: var(--secondary);
+  color: var(--white-primary);
   font-weight: 600;
+  text-decoration: none !important;
+  border-bottom: 1px solid var(--white-primary);
 }
 
 .my-form__actions a:hover {
@@ -6918,14 +6920,17 @@ body.scrolled .hero-item-b .hero-footer {
 }
 
 .my-form__signup a {
-  color: var(--primary);
+  color: var(--white-primary);
   font-weight: 800;
   text-decoration: none;
   font-size: 18px;
+  display: block !important;
+  width: 100%;
+  transition: all ease .3s;
 }
 
-.my-form__signup a:hover {
-  color: var(--primary-hover);
+.my-form__signup a:hover{
+  background-color: var(--white);
 }
 
 /* products.html */
