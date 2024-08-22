@@ -5451,7 +5451,7 @@ a.item-image-f:hover img:not(.no-zoom) {
   position: -webkit-sticky;
   position: sticky;
   top: 128px;
-  overflow-x: scroll !important;
+  overflow-x: scroll;
 }
 
 .scroll-simple-a .scroll-slides {
@@ -5461,22 +5461,22 @@ a.item-image-f:hover img:not(.no-zoom) {
   will-change: transform;
 }
 
-.scroll-simple-a .scroll-slides .scroll-slide {
+.scroll-simple-a .scroll-slide {
   min-width: 100vw;
 }
 
-.scroll-simple-a .scroll-slides .scroll-slide:first-child {
+.scroll-simple-a .scroll-slide:first-child {
   margin-left: 0;
 }
 
-.scroll-simple-a .scroll-slides .scroll-slide:last-child {
+.scroll-simple-a .scroll-slide:last-child {
   margin-right: 0;
 }
 
 @media screen and (min-width: 992px) {
-  .scroll-simple-a .scroll-slides .scroll-slide {
+  .scroll-simple-a .scroll-slide {
     min-width: 35rem;
-    height: auto;
+    height: 25rem;
     margin: 0 64px;
   }
 }
