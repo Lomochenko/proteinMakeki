@@ -63,30 +63,15 @@
                     <a class="nav-link dropdown-toggle fs-4" href="#" id="navbarTopDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         سفارش
-                        <!-- red circle (NEW ALERT) -->
-                        <span
-                            class="position-absolute bottom-50 start-100 p-2 bg-danger border border-dark rounded-circle ms-1">
-                            <span class="visually-hidden">هشدار جدید</span>
-                        </span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarTopDropdown">
-                        <li><a class="dropdown-item text-right fs-5" href="index.htm">ورود<i
-                                    class="ion ion-md-person me-2 fs-5"></i></a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
                         <li><a class="dropdown-item text-right" href="index.htm">سبد خرید<i
-                                    class="ion ion-ios-basket me-2 fs-5"></i></a><!-- red circle (NEW ALERT) -->
-                                    <span
-                                        class="basket-alert p-2 bg-danger border border-dark rounded-circle ms-1">
-                                        <span class="visually-hidden">هشدار جدید</span>
-                                    </span></li>
+                                    class="ion ion-ios-basket me-2 fs-5"></i></a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
                         <li><a class="dropdown-item text-right" href="tel:09123456789">سفارش تلفنی<i
-                                    class="ion ion-md-phone-portrait me-2 fs-5"></i></a>
-                        </li>
+                                    class="ion ion-md-phone-portrait me-2 fs-5"></i></a></li>
                     </ul>
                 </li>
             </ul>
@@ -156,114 +141,52 @@
 
     <!-- BEGIN OF page main content -->
     <main class="page-main sections-scroll scroll-anim" id="mainpage">
-        <!-- Begin of products section -->
-        <section id="products" class="section section-a fullscreen-h-lg">
-
-            <!-- <div class="section-title title-anim sticky-title-off">
-                <h2 class="text rellax" data-rellax-speed="5" data-rellax-percentage="0.5">products</h2>
-            </div> -->
-
+        <section id="login" class="section section-a fullscreen-h-lg text-dark">
             <!-- Begin of section body -->
             <div class="section-body">
                 <!-- content -->
                 <div class="section-content container content-width anim">
-                    <div class="row mb-4">
-                        <div class="col-12 text-right">
-                            <!-- title and description -->
-                            <div class="title-desc" data-anim-visible="zoom-in">
-                                <h2 class="display-3 anim-1 mb-4">Products</h2>
-                                <!-- <p class="anim-2">We made so many products since the beginning of our path. Here are
-                                    some of the
-                                    remarkable ones.</p> -->
-                            </div>
-                        </div>
-                        <div class="col-12 mb-2 mb-lg-0 text-right" data-anim-visible="fade">
-                            <ul class="products-div px-0 pb-2">
-                                <!-- left arrow in PHONE -->
-                                <li class="d-lg-none me-0"><i class="ion ion-md-return-left mt-5 fs-3"
-                                        data-anim-visible="zoom-in" data-anim-start="1.5" data-anim-line-delay="0"></i>
-                                </li>
-                                <!--  -->
-                                <li class="me-0"><a class="btn btn-outline btn-white rounded-pill"
-                                        href="#about">گوسفندی</a></li>
-                                <!--  -->
-                                <li><a class="btn btn-outline btn-white rounded-pill" href="#about">گوساله</a></li>
-                                <!--  -->
-                                <li><a class="btn btn-outline btn-white rounded-pill" href="#about">مرغ</a></li>
-                                <!--  -->
-                                <li><a class="btn btn-outline btn-white rounded-pill" href="#about">ماهی</a></li>
-                                <!--  -->
-                                <li><a class="btn btn-outline btn-white rounded-pill" href="#about">سوخاری</a></li>
-                                <!--  -->
-                                <li><a class="btn btn-outline btn-white rounded-pill" href="#about">برگر</a></li>
-                                <!--  -->
-                                <li><a class="btn btn-outline btn-white rounded-pill" href="#about">جوجه کباب</a></li>
-                                <!--  -->
-                                <li><a class="btn btn-outline btn-white rounded-pill" href="#about">محصولات دیگر</a>
-                                </li>
-                                <!--  -->
+                    <!-- Begin of login -->
+                    <div class="d-lg-flex half">
+                        <div class="bg order-1 order-md-2" style="background-image: url('img/call-to-action');"></div>
+                        <div class="contents order-2 order-md-1">
 
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- item-list -->
-                    <div class="part-wrapper">
-                        <div class="item-list row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 anim-list">
-                            <div class="col mb-2">
-                                <!-- card -->
-                                <div class="item item-image-b" data-anim-visible="fade">
-                                    <!-- img -->
-                                    <div class="item-img rounded-md">
-                                        <img class="fit" src="img/items/img-square-2.jpg" alt="team member">
-                                    </div>
-                                    <div class="item-body">
-                                        <div class="desc">
-                                            <div class="row">
-                                                <!-- title -->
-                                                <div class="col-auto">
-                                                    <h4>Lampon-du</h4>
-                                                </div>
-                                                <!-- line -->
-                                                <div class="col mb-2">
-                                                    <hr class="hr-a">
-                                                </div>
-                                                <!-- price -->
-                                                <div class="col-auto">
-                                                    <span class="price">$79</span>
-                                                </div>
+                            <div class="container">
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="centering text-light">
+                                        <!-- form -->
+                                        <form class="my-form text-light">
+                                            <!-- welcome section -->
+                                            <div class="login-welcome-row">
+                                                <img class="login-welcome" src="img/call-to-action.jpg" alt="proteinMaleki">
+                                                <!-- optimize the image in production -->
+                                                <h1 class="text-light mt-2">خوش آمدید!</h1>
                                             </div>
-                                            <!-- description -->
-                                            <p class="category">Lighting</p>
-                                            <!-- weight -->
-                                            <form action="#" method="#" class="form-floating mt-2 phone-w mx-auto">
-                                                <label for="weight">(KG)</label>
-                                                <div class="input-group">
-                                                    <input type="number" name="weight" id="weight" min="0.5" max="1000"
-                                                        step="0.5" placeholder="0" class="form-control text-left fs-5">
-                                                    <input type="submit"
-                                                        class="input-group-text bg-success text-light fs-5"
-                                                        value="افزودن به سبد خرید">
-                                                </div>
-                                            </form>
-
-                                        </div>
+                                            <!-- userName textField -->
+                                            <div class="text-field">
+                                                <label for="userName" class="text-light">نام کاربری:</label>
+                                                <input class="text-light" aria-label="userName" type="text" id="userName" name="userName"
+                                                placeholder="نام کاربری" dir="ltr">
+                                            </div>
+                                            <!-- password textField -->
+                                            <div class="text-field">
+                                                <label for="password" class="text-light">رمز عبور:</label>
+                                                <input id="password" class="text-light" type="password" aria-label="Password"
+                                                    name="password" placeholder="رمز عبور" dir="ltr">
+                                            </div>
+                                            <!-- submit -->
+                                            <input type="submit" class="my-form__button" value="ورود">
+                                        </form>
                                     </div>
                                 </div>
-                                <!-- end of card -->
                             </div>
-                            <!--  -->
-
-
                         </div>
                     </div>
-                    <!-- end of item-list -->
+                    <!-- End of login -->
                 </div>
             </div>
-            <!-- End of section body -->
-
         </section>
-        <!-- End of products section -->
+
         <!-- Begin of home contact -->
         <section id="contact" class="section section-a fullscreen-h-lg">
             <!-- Begin of section body -->
