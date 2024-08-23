@@ -70,8 +70,7 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item text-right" href="tel:09123456789">سفارش تلفنی<i
-                                    class="ion ion-md-phone-portrait me-2 fs-5"></i></a></li>
+                        <li><a class="dropdown-item text-right" href="tel:09123456789">سفارش تلفنی</a></li>
                     </ul>
                 </li>
             </ul>
@@ -137,7 +136,7 @@
         </nav>
     </header>
     <!-- End of navigation bar .navbar-top -->
-    <div class="nav-dot-menu"></div>
+    <!-- <div class="nav-dot-menu"></div> -->
 
     <!-- BEGIN OF page main content -->
     <main class="page-main sections-scroll scroll-anim" id="mainpage">
@@ -180,13 +179,39 @@
                                             <input type="submit" class="my-form__button" value="ورود">
                                             <!-- form action -->
                                             <div class="my-form__actions">
+                                                <!-- Button trigger modal for password recovery -->
                                                 <div class="my-form__row">
                                                     <span>رمز خود را فراموش کردید؟</span>
-                                                    <a href="#" title="Reset Password">بازیابی رمز عبور</a>
+                                                    <a title="Reset Password" data-bs-toggle="modal"
+                                                        data-bs-target="#passRecovery">بازیابی رمز</a>
                                                 </div>
-                                                <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
-                                                    data-bs-target="#exampleModal">
+                                                <!-- password recovery Modal -->
+                                                <div class="modal fade" id="passRecovery" tabindex="-1"
+                                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+                                                                <button type="button" class="btn-close mx-0"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body text-dark fs-5">
+                                                                در صورت فراموشی رمز عبور برای بازیابی رمز باید با
+                                                                فروشگاه تماس حاصل بفرمایید.
+                                                            </div>
+                                                            <!-- modal footer -->
+                                                            <div class="modal-footer">
+                                                                <a href="tel:0321456789"
+                                                                    class="btn btn-dark btn-block d-block w-100">تماس با
+                                                                    فروشگاه<i
+                                                                    class="ion ion-md-phone-portrait me-2 fs-5"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Button trigger modal for register -->
+                                                <button type="button" class="btn btn-outline-light"
+                                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
                                                     ثبت نام
                                                 </button>
                                                 <!-- Register Modal -->
@@ -200,11 +225,16 @@
                                                                     data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
                                                             <div class="modal-body text-dark fs-5">
-                                                                برای عضویت در باشگاه مشتریان پروتئین ملکی باید با ما تماس حاصل بفرمایید.
+                                                                سیستم احراز هویت توسط پروتئین ملکی انجام میشود, برای
+                                                                عضویت در باشگاه مشتریان پروتئین ملکی باید با ما
+                                                                تماس حاصل بفرمایید.
                                                             </div>
                                                             <!-- modal footer -->
                                                             <div class="modal-footer">
-                                                                <a href="tel:0321456789" class="btn btn-dark btn-block d-block w-100" data-bs-dismiss="modal">تماس با فروشگاه</a>
+                                                                <a href="tel:0321456789"
+                                                                    class="btn btn-dark btn-block d-block w-100">تماس با
+                                                                    فروشگاه<i
+                                                                    class="ion ion-md-phone-portrait me-2 fs-5"></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
