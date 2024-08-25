@@ -7011,7 +7011,7 @@ body.scrolled .hero-item-b .hero-footer {
   padding: 0;
 }
 
-.panel .panel-body .table thead tr th {
+.panel .panel-body .table thead tr th,caption {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 1.2rem;
@@ -7026,6 +7026,9 @@ body.scrolled .hero-item-b .hero-footer {
   text-align: center;
 }
 
+.panel .panel-body .table .tdAddress{
+  display: t;
+}
 .panel .panel-body .table tbody tr td {
   color: #fff;
   font-size: 1.2rem;
