@@ -6527,6 +6527,7 @@ body.scrolled .hero-d .hero-footer {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  margin-top: 5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -6535,10 +6536,10 @@ body.scrolled .hero-d .hero-footer {
   }
 }
 
-.hero-item-a .section-body {
-  padding-top: 6rem;
-  padding-bottom: 3rem;
-}
+/* .hero-item-a .section-body {
+  padding-top: 6rem !important;
+  padding-bottom: 3rem !important;
+} */
 
 @media screen and (min-height: 660px) {
   .hero-item-a .section-body {
@@ -6548,8 +6549,8 @@ body.scrolled .hero-d .hero-footer {
 
 @media screen and (min-width: 992px) {
   .hero-item-a .section-body {
-    padding-top: 0rem;
-    padding-bottom: 0rem;
+    padding-top: 6rem !important;
+    padding-bottom: 3rem !important;
   }
 }
 
