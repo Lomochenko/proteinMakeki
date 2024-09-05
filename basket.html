@@ -392,6 +392,61 @@
     <!-- END OF page main content -->
 
     <!-- scripts -->
+    <script>
+        function printReceipt(receiptData) {
+            // Convert receiptData to a printable string  
+            let receiptString = "";
+            receiptString += "<center><font size='5px' face='Arial' weight='bold'>PROTEIN MALEKI</font></center>\n";
+            receiptString += "<center><font size='2px' face='Arial'>Your Store Address</font></center>\n";
+            receiptString += "<p style='border: 1px solid;'><font size='2px' face='Arial' align='left'>09123456789</font>\n <font size='2px' face='Arial' align='right'>naseri</font></p>\n";
+            receiptString += "--------------------\n";
+            receiptString += "<font size='1px' face='Arial'>Product Title</font> <font size='1px' face='Arial'>Product Weight</font> <font size='1px' face='Arial'>Product Price</font>\n";
+            receiptString += "--------------------\n";
+            receiptData.items.forEach((item) => {
+                receiptString += "<font size='1px' face='Arial'>" + item.name + "</font> <font size='1px' face='Arial'>" + item.quantity + "</font> <font size='1px' face='Arial'>" + item.price + "</font>\n";
+            });
+            receiptString += "--------------------\n";
+            receiptString += "<center><font size='1px' face='Arial' weight='bold'>Total: " + receiptData.total + "</font></center>\n";
+            receiptString += "--------------------\n";
+
+            // Create a new window for printing  
+            const printWindow = window.open("", "", "width=600,height=600");
+
+            // Load the receipt string into the new window  
+            printWindow.document.write(receiptString);
+            printWindow.document.close();
+
+            // Print the content of the new window  
+            printWindow.focus();
+            printWindow.print();
+
+            // Close the new window  
+            printWindow.close();
+        }
+
+        // Example receipt data  
+        const receiptData = {
+            date: "2023-10-26",
+            items: [
+                { name: "گوشت", quantity: 2, price: 100.0 },
+                { name: "مذغ سگ", quantity: 1, price: 5.0 },
+            ],
+            total: 25.0,
+        };
+
+        // Function to handle button click  
+        function handlePrintClick() {
+            printReceipt(receiptData);
+        }
+
+        // Create a button element  
+        const printButton = document.createElement("button");
+        printButton.textContent = "Print Receipt";
+        printButton.addEventListener("click", handlePrintClick);
+
+        // Append the button to the document  
+        document.body.appendChild(printButton);  
+    </script>
     <!-- All Javascript plugins goes here -->
     <script src="./js/bootstrap.min.js"></script>
 
