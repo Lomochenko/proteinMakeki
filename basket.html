@@ -424,8 +424,6 @@
             printWindow.focus();
             printWindow.print();
 
-            // Close the new window  
-            printWindow.close();
         }
 
 
@@ -433,6 +431,9 @@
         // Function to handle button click  
         function handlePrintClick() {
             printReceipt();
+            
+            // Close the new window  
+            printWindow.close();
         }
 
     </script>
