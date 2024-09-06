@@ -164,7 +164,8 @@
                                                 title="totalPrice">4.000.000</span>
                                         </div>
                                         <div class="text-center me-auto">
-                                            <a href="#" class="btn bg-success text-light fs-5" title="submit">ثبت
+                                            <a href="#" onclick="handlePrintClick()"
+                                                class="btn bg-success text-light fs-5" title="submit">ثبت
                                                 نهایی</a>
                                         </div>
                                     </div>
@@ -393,24 +394,38 @@
 
     <!-- scripts -->
     <script>
-        function printReceipt(receiptData) {
+        function printReceipt() {
             // Convert receiptData to a printable string  
             let receiptString = "";
-            receiptString += "<center><font size='5px' face='Arial' weight='bold'>PROTEIN MALEKI</font></center>\n";
-            receiptString += "<center><font size='2px' face='Arial'>Your Store Address</font></center>\n";
-            receiptString += "<p style='border: 1px solid;'><font size='2px' face='Arial' align='left'>09123456789</font>\n <font size='2px' face='Arial' align='right'>naseri</font></p>\n";
-            receiptString += "--------------------\n";
-            receiptString += "<font size='1px' face='Arial'>Product Title</font> <font size='1px' face='Arial'>Product Weight</font> <font size='1px' face='Arial'>Product Price</font>\n";
-            receiptString += "--------------------\n";
-            receiptData.items.forEach((item) => {
-                receiptString += "<font size='1px' face='Arial'>" + item.name + "</font> <font size='1px' face='Arial'>" + item.quantity + "</font> <font size='1px' face='Arial'>" + item.price + "</font>\n";
-            });
-            receiptString += "--------------------\n";
-            receiptString += "<center><font size='1px' face='Arial' weight='bold'>Total: " + receiptData.total + "</font></center>\n";
-            receiptString += "--------------------\n";
-
+            receiptString += "<center style='font-size: 24; font-weight: bold; margin-right:10px;'>PROTEIN MALEKI</center>\n";
+            receiptString += "<center style='font-size: 18px; font-weight: bold; margin-right:10px; display:flex; justify-content: space-between;'><span>proteinmaleki.com</span> <span>: وبسایت</span></center>\n";
+            receiptString += "<center style='font-size: 18px; font-weight: bold; margin:0 10px 10px 0; display:flex; justify-content: space-between;'><span>protein.maleki</span> <span>: اینستاگرام</span></center>\n";
+            receiptString += `<center style="margin-right:10px;"><table dir='rtl' style="width:100%; border-collapse:collapse;">
+  <thead>
+    <tr>
+      <th style="border:1px solid black; padding:5px;">نام محصول</th>
+      <th style="border:1px solid black; padding:5px;">وزن(kg)</th>
+      <th style="border:1px solid black; padding:5px;">قیمت(تومان)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid black; padding:5px;">راسته گوساله خرچنگ دریایی</td>
+      <td style="border:1px solid black; padding:5px;">2.5</td>
+      <td style="border:1px solid black; padding:5px;">950.000</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3" style="border:1px solid black; padding:5px; text-align:center;">جمع فاکتور: <span>950.000</span></td>
+    </tr>
+  </tfoot>
+</table></center>\n`;
+            receiptString += "<center style='font-size: 15px; margin:10px 10px 5px 0; font-weight: bold; display:flex; justify-content: space-between;'><span>09122173156</span> <span>علی ناصری</span></center>\n";
+            receiptString += "<center style='font-size: 13px; font-weight: bold; margin-right:10px;'>آدرس: <span>شهر جدید هشتگرد, فاز یک, خیابات اسکان, خیابان آرمان, کوچه آرمان 12, پلاک 110</span></center><br>\n";
+            receiptString += `<strong style='font-size: 17px; font-weight: bold;'><font face='Arial'>Designed by "pestehmenu.ir"</font></strong>`;
             // Create a new window for printing  
-            const printWindow = window.open("", "", "width=600,height=600");
+            const printWindow = window.open("", "", "width=100%,height=auto");
 
             // Load the receipt string into the new window  
             printWindow.document.write(receiptString);
@@ -424,28 +439,13 @@
             printWindow.close();
         }
 
-        // Example receipt data  
-        const receiptData = {
-            date: "2023-10-26",
-            items: [
-                { name: "گوشت", quantity: 2, price: 100.0 },
-                { name: "مذغ سگ", quantity: 1, price: 5.0 },
-            ],
-            total: 25.0,
-        };
+        
 
         // Function to handle button click  
         function handlePrintClick() {
-            printReceipt(receiptData);
+            printReceipt();
         }
 
-        // Create a button element  
-        const printButton = document.createElement("button");
-        printButton.textContent = "Print Receipt";
-        printButton.addEventListener("click", handlePrintClick);
-
-        // Append the button to the document  
-        document.body.appendChild(printButton);  
     </script>
     <!-- All Javascript plugins goes here -->
     <script src="./js/bootstrap.min.js"></script>
