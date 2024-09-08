@@ -173,7 +173,7 @@
                                 <div class="panel-body table-responsive">
                                     <table class="table">
                                         <caption class="fw-normal text-right pe-3">آدرس مشتری : <span>مهستان, فاز
-                                            یک, خیابان اسکان مهستان, فاز یک, خیابان اسکان </span></caption>
+                                                یک, خیابان اسکان مهستان, فاز یک, خیابان اسکان </span></caption>
                                         <thead>
                                             <tr>
                                                 <th>#</th>
@@ -248,11 +248,11 @@
                                                 </td>
                                             </tr>
                                             <!-- customer name & phone number -->
-                                             <tr>
+                                            <tr>
                                                 <td>علی ناصری</td>
                                                 <td>09123647852</td>
-                                             </tr>
-                                            
+                                            </tr>
+
                                         </tbody>
                                     </table>
                                     <!-- left arrow -->
@@ -386,9 +386,10 @@
         function printReceipt() {
             // Convert receiptData to a printable string  
             let receiptString = "";
-            receiptString += "<center style='font-size: 24; font-weight: bold; margin-right:10px;'>PROTEIN MALEKI</center>\n";
-            receiptString += "<center style='font-size: 18px; font-weight: bold; margin-right:10px; display:flex; justify-content: space-between;'><span>proteinmaleki.com</span> <span>: وبسایت</span></center>\n";
-            receiptString += "<center style='font-size: 18px; font-weight: bold; margin:0 10px 10px 0; display:flex; justify-content: space-between;'><span>protein.maleki</span> <span>: اینستاگرام</span></center>\n";
+            receiptString += `<center style='margin-right:10px;'><img width="100px" height="100px" src="img/maleki.svg"/></center>\n`;
+            receiptString += `<center style='font-size: 24; font-weight: bold; margin-right:10px;'>PROTEIN MALEKI</center><br>`;
+            receiptString += `<center style='font-size: 18px; font-weight: bold; margin-right:10px; display:flex; justify-content: space-between;'><span>proteinmaleki.com</span> <span>: وبسایت</span></center>\n`;
+            receiptString += `<center style='font-size: 18px; font-weight: bold; margin:0 10px 10px 0; display:flex; justify-content: space-between;'><span>protein.maleki</span> <span>: اینستاگرام</span></center><br>`;
             receiptString += `<center style="margin-right:10px;"><table dir='rtl' style="width:100%; border-collapse:collapse;">
   <thead>
     <tr>
@@ -410,8 +411,8 @@
     </tr>
   </tfoot>
 </table></center>\n`;
-            receiptString += "<center style='font-size: 15px; margin:10px 10px 5px 0; font-weight: bold; display:flex; justify-content: space-between;'><span>09122173156</span> <span>علی ناصری</span></center>\n";
-            receiptString += "<center style='font-size: 13px; font-weight: bold; margin-right:10px;'>آدرس: <span>شهر جدید هشتگرد, فاز یک, خیابات اسکان, خیابان آرمان, کوچه آرمان 12, پلاک 110</span></center><br>\n";
+            receiptString += `<center style='font-size: 15px; margin:10px 10px 5px 0; font-weight: bold; display:flex; justify-content: space-between;'><span>09122173156</span> <span>علی ناصری</span></center>\n`;
+            receiptString += `<center style='font-size: 13px; font-weight: bold; margin-right:10px;'>آدرس: <span>شهر جدید هشتگرد, فاز یک, خیابات اسکان, خیابان آرمان, کوچه آرمان 12, پلاک 110</span></center><br>\n`;
             receiptString += `<strong style='font-size: 17px; font-weight: bold;'><font face='Arial'>Designed by "pestehmenu.ir"</font></strong>`;
             // Create a new window for printing  
             const printWindow = window.open("", "", "width=100%,height=auto");
@@ -426,12 +427,10 @@
 
         }
 
-
-
         // Function to handle button click  
         function handlePrintClick() {
             printReceipt();
-            
+
             // Close the new window  
             printWindow.close();
         }
