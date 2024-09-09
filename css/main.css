@@ -186,7 +186,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 0.875rem;
 }
 
-.text-p-xl p {
+.text-p-xl p,h2 {
   color: currentColor;
   font-size: 1.5rem;
   line-height: 1.7;
@@ -194,21 +194,21 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (min-width: 768px) {
-  .text-p-xl p {
+  .text-p-xl p,h2 {
     font-size: 1.5rem;
     line-height: 1.8;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .text-p-xl p {
+  .text-p-xl p,h2 {
     font-size: 3rem;
     line-height: 1.4;
   }
 }
 
-.text-p-xl p strong,
-.text-p-xl p .strong {
+.text-p-xl p,h2 strong,
+.text-p-xl p,h2 .strong {
   font-weight: 600;
 }
 
