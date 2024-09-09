@@ -5512,7 +5512,7 @@ a.item-image-f:hover img:not(.no-zoom) {
   display: block;
   width: 160px;
   height: 160%;
-  background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
+  background: linear-gradient(90deg, transparent, #ECDFCC, #697565, #3C3D37, #1E201E, transparent);
   animation: rotation_481 5000ms infinite linear;
 }
 
