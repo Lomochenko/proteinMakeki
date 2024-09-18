@@ -1016,6 +1016,10 @@ h2 .strong {
 
 .navbar-a .navbar-brand .light-logo {
   display: block;
+  width: 50px !important;
+  height: 50px !important;
+  object-fit: cover;
+  /* mix-blend-mode: color-burn; */
 }
 
 .navbar-a .navbar-brand .dark-logo {
